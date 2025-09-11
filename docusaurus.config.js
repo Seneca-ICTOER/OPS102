@@ -5,19 +5,23 @@ import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'OPS102',
-  tagline: 'Operating Systems for Programmers',
-  url: 'https://seneca-ictoer.github.io/',
+  title: 'Introduction to Programming Using C',
+  tagline: 'Introduction to Programming Using C',
+  url: 'https://Seneca-ICTOER.github.io/',
   baseUrl: '/OPS102/',
   trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'seneca-ictoer',
+  organizationName: 'seneca-ICTOER',
   projectName: 'OPS102',
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   themeConfig: {
     navbar: {
-      title: 'OPS102 - Operating Systems for Programmers',
+      title: 'Introduction to Programming Using C',
       logo: {
         alt: 'Seneca Polytechnic',
         src: 'img/logo.svg',
@@ -37,7 +41,7 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'OPS102 - Operating Systems for Programmers',
+          title: 'Introduction to Programming',
           items: [
             {
               html: `<a href='#' id='pwa-button' class='footer__link-item' hidden>Install as an App</a>`,
@@ -59,8 +63,11 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/catherine-leung/OERTemplate/tree/main',
-          remarkPlugins: [remarkMath],
+          editUrl: 'https://github.com/Seneca-ICTOER/OPS102/tree/main',
+          remarkPlugins: [
+            remarkMath,
+            [require('@renatonagliati/remark-auto-glossary').default, { yamlFile: 'glossary.yml' }],
+          ],
           rehypePlugins: [[rehypeKatex, { strict: false }]],
         },
         theme: {

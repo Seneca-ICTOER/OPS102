@@ -1,0 +1,91 @@
+input:
+  term: Input
+  def: 'Information provided to a program.  The data can be interactively entered or come from some other source such as files or databases'
+
+output:
+  term: Output
+  def: 'Information that is displayed to the user.  This can be something shown onto a screen or sent to some other data store such as a file or database'
+
+function:
+  term: Function
+  def: 'A function is a piece of code that does a task and produces a result.  Functions are parameterized allowing results to vary based on supplied values'
+
+library:
+  term: Library
+  def: 'A collection of modules that provide support of common tasks.  For example, ctype is a library that handles character type related operations.'
+
+variable:
+  term: Variable
+  def: 'A named area of memory that stores a piece of information'
+
+syntax:
+  term: Syntax
+  def: 'The rules of the programming language that dictate the sequencing of the tokens'
+
+arguments:
+  term: Arguments
+  def: 'The values given to a function in a function call'
+
+parameters:
+  term: Parameters
+  def: "The information required by the function.  These are declared in the function's prototype.  Parameters values are provided to the function during the function call as the function's arguments."
+
+functioncall:
+  term: 'Function Call'
+  def: 'A function call takes tells the program to execute the instructions in the function before continuing to the next statement in the program'
+
+undefined:
+  term: Undefined
+  def: 'An undefined value is one that does not have some specific intialization.  Using an undefined value in a calculation will lead to further errors'
+
+constant:
+  term: Constant
+  def: 'A constant is a named value that cannot be modified once it is initialized.  C has two ways to create constants.  It can do it through a pre-processor statement or it can be done as a declaration with a const modifier.  The const modifier method is a newer construct and not compatible with older compilers'
+
+syntaxerror:
+  term: 'Syntax Error'
+  def: 'A syntax error is an error that breaks the language rules of your programming language.  For example, C requires each statment to be terminated with a semi-colon (;).  If you forget to add this, you are breaking the syntax rules and it will result in a syntax error'
+
+logicalerror:
+  term: 'Logical Error'
+  def: 'A logical error is an error where the logic of the program is not correct... this could be a miscalculation, a wrong sequencing of statements, a misplaced logical structure and more.'
+
+operators:
+  term: Operators
+  def: 'symbols used to indicate the operation to be performed. '
+
+operands:
+  term: Operands
+  def: 'data that is being used by the operator'
+
+prototype:
+  term: 'Function Prototypes'
+  def: 'A function prototype is used to declare a function, it consists of a statement describing the return type of the function, the function name and the data types of the arguments'
+
+cohesion:
+  term: 'Cohesion'
+  def: 'Cohesion refers to the relationship of the code within a function.  A highly cohesive function means that all the code are parts of a single task.'
+
+coupling:
+  term: 'Coupling'
+  def: 'Coupling refers to the relationship of code between functions.  Loosely coupled functions have very few dependencies on other functions'
+
+runtimestack:
+  term: 'Runtime Stack'
+  def: 'The runtime stack is a structure used to organize local variables and function calls'
+
+flowchart:
+  term: 'Flowchart'
+  def: 'A pictorial representation of the sequence of steps in our program'
+
+truthy:
+  term: 'Truthy'
+  def: "Any non-zero value is truthy.  That is when checked in a condition, anything that isn't zero is considered to be true"
+
+falsey:
+  term: 'Falsey'
+  def: 'Any zero value is falsey.  That is when checked in a condition, anything that evaluates to zero is considered to be false'
+
+l-value:
+  term: 'L-value'
+  def: 'An L-value refers to something that you can put on the left hand sign of an assignment operation.  It is something that is modifiable and not a fixed value.'
