@@ -1,8 +1,8 @@
 ---
-id: intro
+id: toc
 title: Table of contents
-sidebar_position: 1
-slug: /
+sidebar_position: 2
+slug: /toc
 description: Contents of (course notes title here)
 ---
 

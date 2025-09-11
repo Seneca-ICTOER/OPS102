@@ -1,31 +1,37 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const math = require('remark-math');
-const katex = require('rehype-katex');
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'OPS102 - Operating Systems for Programmers',
-  tagline: 'OPS102',
-  url: 'https://Seneca-ICTOER.github.io/',
+  title: 'OPS102',
+  tagline: 'Operating Systems for Programmers',
+  url: 'https://seneca-ictoer.github.io/',
   baseUrl: '/OPS102/',
   trailingSlash: false,
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Seneca-ICTOER',
+  organizationName: 'seneca-ictoer',
   projectName: 'OPS102',
   themeConfig: {
     navbar: {
       title: 'OPS102 - Operating Systems for Programmers',
       logo: {
-        alt: 'Seneca College',
+        alt: 'Seneca Polytechnic',
         src: 'img/logo.svg',
         srcDark: 'img/logo-dark.svg',
       },
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
     tableOfContents: {
-      maxHeadingLevel: 4,
+      minHeadingLevel: 2,
+      maxHeadingLevel: 5,
     },
     footer: {
       style: 'dark',
@@ -34,16 +40,12 @@ module.exports = {
           title: 'OPS102 - Operating Systems for Programmers',
           items: [
             {
-              label: 'Contents',
-              to: '/',
-            },
-            {
               html: `<a href='#' id='pwa-button' class='footer__link-item' hidden>Install as an App</a>`,
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Seneca College.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Seneca Polytechnic.`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -57,9 +59,9 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/Seneca-ICTOER/OPS102/tree/main',
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
+          editUrl: 'https://github.com/catherine-leung/OERTemplate/tree/main',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [[rehypeKatex, { strict: false }]],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -77,6 +79,7 @@ module.exports = {
   ],
   clientModules: [require.resolve('./pwaCustomButton.js')],
   plugins: [
+    require.resolve('docusaurus-lunr-search'),
     [
       '@docusaurus/plugin-pwa',
       {
