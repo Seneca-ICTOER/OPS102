@@ -5,8 +5,8 @@ import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Introduction to Programming Using C',
-  tagline: 'Introduction to Programming Using C',
+  title: 'Operating Systems for Programmers',
+  tagline: 'Operating Systems for Programmers',
   url: 'https://Seneca-ICTOER.github.io/',
   baseUrl: '/OPS102/',
   trailingSlash: false,
@@ -21,7 +21,7 @@ module.exports = {
   themes: ['@docusaurus/theme-mermaid'],
   themeConfig: {
     navbar: {
-      title: 'Introduction to Programming Using C',
+      title: 'Operating Systems for Programmers',
       logo: {
         alt: 'Seneca Polytechnic',
         src: 'img/logo.svg',
@@ -41,7 +41,7 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Introduction to Programming',
+          title: 'Operating Systems for Programmers',
           items: [
             {
               html: `<a href='#' id='pwa-button' class='footer__link-item' hidden>Install as an App</a>`,
