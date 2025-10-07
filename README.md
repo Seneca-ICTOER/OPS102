@@ -1,5 +1,7 @@
 # README
 
+## Useless edit!
+
 This template repository is set up for you to create and deploy an OER customized for Seneca College SCPA/ITAS/SDDS. To create a repo based on this template:
 
 1. Click on the green "Use this template" button near top right corner of code tab
