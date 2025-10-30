@@ -47,8 +47,8 @@ description: Contents of (course notes title here)
 
 ## 6. Resources and Processes
 
-- [Computer Resources](06-Resources-and-Processes/01-Resources.md)
-- [Monitoring and Terminating Processes](06-Resources-and-Processes/02-Processes.md)
+- [Computer Resources](06-Resources_and_Processes/01-Resources.md)
+- [Monitoring and Terminating Processes](06-Resources_and_Processes/02-Processes.md)
 
 ## 7. Bash Scripting
 
