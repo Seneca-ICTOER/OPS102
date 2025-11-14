@@ -1,14 +1,10 @@
 # Parameters
 
-Arguments to a script are called parameters. You can access the
-parameters using the special variables *\$0*, *\$1*, *\$2*, and so
-forth. *\$0* contains the name of the script, *\$1* contains the first
-parameter, *\$2* contains the second parameter, and so forth.
+Arguments to a script are called parameters. You can access the parameters using the special variables `$0`, `$1`, `$2`, and so forth. `$0` contains the name of the script, `$1` contains the first parameter, `$2` contains the second parameter, and so forth.
 
-The special variable *\$#* contains the total number of parameters.
+The special variable `$#` contains the total number of parameters.
 
-Here is a simple script which shows you what parameters have been
-received:
+Here is a simple script which shows you what parameters have been received:
 
 ~~~bash
 #!/usr/bin/bash​
@@ -33,10 +29,7 @@ Parameter 3:           blue​
 Parameter 4:
 ~~~
 
-The *shift* command discards parameter *\$1* and moves each of the
-remaining parameters to the previous position (so the value in parameter
-*\$2* is moved to *\$1*, and *\$3* is moved to *\$2*). We can modify the
-previous script to demonstrate this:
+The `shift` command discards parameter `$1` and moves each of the remaining parameters to the previous position (so the value in parameter `$2` is moved to `$1`, and `$3` is moved to `$2`). We can modify the previous script to demonstrate this:
 
 ~~~bash
 $ cat params2​
@@ -73,5 +66,4 @@ Parameter 3:           
 Parameter 4:  
 ~~~
 
-The *shift* command is useful for looping through parameters, and for
-accessing parameters higher than number 9.
+The `shift` command is useful for looping through parameters, and for accessing parameters higher than number 9.

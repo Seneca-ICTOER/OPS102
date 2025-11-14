@@ -33,7 +33,7 @@ done
 ~~~
 
 Or the list may be the list of parameters (arguments to the script),
-written as *\"\$@\"*:
+written as `"$@"`:
 
 ~~~bash
 for A in "$@"
@@ -42,9 +42,7 @@ do
 done
 ~~~
 
-The most common use of this type of loop may be one or more globbing
-patterns (filename patterns with wildcard characters), which will be
-replaced with a list of all matching filenames:
+The most common use of this type of loop may be one or more globbing patterns (filename patterns with wildcard characters), which will be replaced with a list of all matching filenames:
 
 ~~~bash
 for SOURCEFILE in *.c
@@ -53,14 +51,9 @@ do
 done
 ~~~
 
-One thing to remember with this last form of the loop is that *if the
-pattern does not match any file* then the pattern itself will be
-assigned to the variable. For example, in the example above, if there
-are no files that match the pattern `*.c` then the variable SOURCEFILE
-will be set to the actual pattern: `SOURCEFILE=*.c`
+One thing to remember with this last form of the loop is that *if the pattern does not match any file* then the pattern itself will be assigned to the variable. For example, in the example above, if there are no files that match the pattern `*.c` then the variable SOURCEFILE will be set to the actual pattern: `SOURCEFILE=*.c`
 
-This can be used in various ways. For example, this loop will compile
-all of the C source files found in the current directory:
+This can be used in various ways. For example, this loop will compile all of the C source files found in the current directory:
 
 ~~~bash
 for SOURCEFILE in *.c
@@ -74,20 +67,12 @@ do
 done
 ~~~
 
-(It\'s also possible to generate the `LIST` in other ways \-- for
-example, from the output of another command, captured with `$( )` )
+(It's also possible to generate the `LIST` in other ways -- for example, from the output of another command, captured with `$( )` )
 
-## The \"C-style\" for loop: for (( ; ; )) 
+## The "C-style" for loop: for (( ; ; )) 
 
-This loop is very similar to the \"for\" loop available in the C
-language. The C parenthesis are changed to bash double-parenthesis, to
-invoke the bash arithmetic syntax, and the curly-braces `{ }` used in C
-are replaced by the bash *do* and *done* keywords. The three arguments
-in the double-parenthesis are the initial condition (variable
-initialization), the control condition (an expression that, while true,
-causes the loop to continue), and the increment/decrement (an expression
-which is executed at the end of each loop, which typically increments or
-decrements a counter).
+This loop is very similar to the \"for\" loop available in the C language. The C parenthesis are changed to bash double-parenthesis, to invoke the bash arithmetic syntax, and the curly-braces `{ }` used in C are replaced by the bash *do* and *done* keywords. The three arguments in the double-parenthesis are the initial condition (variable
+initialization), the control condition (an expression that, while true, causes the loop to continue), and the increment/decrement (an expression which is executed at the end of each loop, which typically increments or decrements a counter).
 
 For example, this loop counts from 1 to 10:
 
@@ -109,9 +94,7 @@ do
 done
 ~~~
 
-*EXPR* may be any single bash command, or a list of bash commands
-separated by newline characters (ENTER key) or semicolons, or a pipeline
-of commands. Most commonly it is a `test` `[[` command.
+*EXPR* may be any single bash command, or a list of bash commands separated by newline characters (ENTER key) or semicolons, or a pipeline of commands. Most commonly it is a `test` `[[  ]]` command.
 
 ## until EXPR 
 
@@ -124,9 +107,7 @@ do
 done
 ~~~
 
-This loop will continue as long as *\$X* is less than or equal to *\$Y*
-\-- as soon as the expression becomes true (when *\$X* is greater than
-*\$Y*), the loop will stop.
+This loop will continue as long as `$X` is less than or equal to `$Y` -- as soon as the expression becomes true (when `$X` is greater than `$Y`), the loop will stop.
 
 # Examples
 

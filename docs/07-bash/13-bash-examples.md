@@ -9,10 +9,10 @@ computer:
 #!/usr/bin/bash​
 architecture="$(uname -m)" # uname gets system information​
 ​
-if `[`"$architecture" == "x86_64"`]("$architecture"_==_"x86_64" "wikilink")`​
+if [[ "$architecture" == "x86_64" ]]
 then​
    echo "Your computer architecture is Intel/AMD x86_64."​
-elif `[`"$architecture" == "aarch64"`]("$architecture"_==_"aarch64" "wikilink")`​
+elif [[ "$architecture" == "aarch64" ]]
 then​
    echo "Your computer uses the 64-bit Arm architecture."​
 else​
@@ -38,7 +38,7 @@ NOW="$(date +%s)"​
 # Tell the user if the customer is old enough to be served alcohol​
 # This tests checks to see if the customer's 19th birthday is
 # less than (before) the current date.
-if `[`"$D" -lt "$NOW"`]("$D"_-lt_"$NOW" "wikilink")`​
+if [[ "$D" -lt "$NOW" ]]
 then​
     echo "The customer is of legal drinking age in Ontario."​
 else​
@@ -54,30 +54,20 @@ This script flips a virtual coin:
 #!/usr/bin/bash​
 
 COINFLIP=$((RANDOM % 2))​  # % is the modulus operator
-if `[`"$COINFLIP" == 0`]("$COINFLIP"_==_0 "wikilink")`​
+if [[ "$COINFLIP" == 0 ]]
 then​
-    echo "Heads! 🙂"​
+    echo "Heads!"​
 else​
-    echo "Tails 😦"​
+    echo "Tails"​
 fi
 ~~~
 
-The COINFLIP variable is set to the remainder of the division of
-`$RANDOM` by 2. Therefore, it will have a random value of 0 or 1.
-
-Note that this script uses extended Unicode characters \-- however, for
-these to display properly, your terminal and your terminal font must
-both support the extended characters. Besides emoji, extended characters
-may be used to display accented characters, symbols, and characters from
-other languages.
+The COINFLIP variable is set to the remainder of the division of `$RANDOM` by 2. Therefore, it will have a random value of 0 or 1.
 
 ## Cautious File Delete 
 
-This script checks a file, provided as a positional argument
-(parameter), to ensure that it is a regular file and is writable, and
-then asks the user if they want to delete it. Note that this script uses
-the *-f* (file) test, *-w* (writeable) test, and combines a number of
-string tests with the *\|\|* (OR) operator:
+This script checks a file, provided as a positional argument (parameter), to ensure that it is a regular file and is writable, and then asks the user if they want to delete it. Note that this script uses the `-f` (file) test, `-w` (writeable) test, and combines a number of
+string tests with the `||` (OR) operator:
 
 ~~~bash
 #!/usr/bin/bash​
@@ -87,10 +77,10 @@ then
     exit 1
 fi
 F="$1"  # Put the first (and only!) argument value into the variable F
-if [ ! -f "$F" ]​
+if [[ ! -f "$F" ]​]
 then​
     echo "The filename '$F' does not refer to a regular file - skipping."​
-elif [ ! -w "$F" ]​
+elif [[ ! -w "$F" ]​]
 then​
     echo "The file '$F' is not writeable (by you) - skipping."​
 else​
