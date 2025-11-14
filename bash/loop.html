@@ -14,8 +14,8 @@
 <meta name="msapplication-TileColor" content="#DA291C">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/OPS102/assets/css/styles.966c191a.css">
-<script src="/OPS102/assets/js/runtime~main.0113b4d0.js" defer="defer"></script>
-<script src="/OPS102/assets/js/main.74667dd4.js" defer="defer"></script>
+<script src="/OPS102/assets/js/runtime~main.ff14b8b4.js" defer="defer"></script>
+<script src="/OPS102/assets/js/main.c48387b1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -39,46 +39,27 @@ constants:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">for X in 1 2 3</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">do</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ... body of the loop ...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">done</span><br></span></code></pre></div></div>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">for COLOUR in red green blue</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">do</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ... body of the loop ...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">done</span><br></span></code></pre></div></div>
 <p>Or the list may be the list of parameters (arguments to the script),
-written as <em>&quot;$@&quot;</em>:</p>
+written as <code>&quot;$@&quot;</code>:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">for A in &quot;$@&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">do</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ... body of the loop ...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">done</span><br></span></code></pre></div></div>
-<p>The most common use of this type of loop may be one or more globbing
-patterns (filename patterns with wildcard characters), which will be
-replaced with a list of all matching filenames:</p>
+<p>The most common use of this type of loop may be one or more globbing patterns (filename patterns with wildcard characters), which will be replaced with a list of all matching filenames:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">for SOURCEFILE in *.c</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">do</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ... body of the loop ...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">done</span><br></span></code></pre></div></div>
-<p>One thing to remember with this last form of the loop is that <em>if the
-pattern does not match any file</em> then the pattern itself will be
-assigned to the variable. For example, in the example above, if there
-are no files that match the pattern <code>*.c</code> then the variable SOURCEFILE
-will be set to the actual pattern: <code>SOURCEFILE=*.c</code></p>
-<p>This can be used in various ways. For example, this loop will compile
-all of the C source files found in the current directory:</p>
+<p>One thing to remember with this last form of the loop is that <em>if the pattern does not match any file</em> then the pattern itself will be assigned to the variable. For example, in the example above, if there are no files that match the pattern <code>*.c</code> then the variable SOURCEFILE will be set to the actual pattern: <code>SOURCEFILE=*.c</code></p>
+<p>This can be used in various ways. For example, this loop will compile all of the C source files found in the current directory:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">for SOURCEFILE in *.c</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">do</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo &quot;=== Compiling $SOURCEFILE ===&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  # This next line removes the extension from the filename</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  BINARY=&quot;$(echo $SOURCEFILE | cut -d. -f1)&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  gcc SOURCEFILE -o $BINARY</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">done</span><br></span></code></pre></div></div>
-<p>(It&#x27;s also possible to generate the <code>LIST</code> in other ways -- for
-example, from the output of another command, captured with <code>$( )</code> )</p>
+<p>(It&#x27;s also possible to generate the <code>LIST</code> in other ways -- for example, from the output of another command, captured with <code>$( )</code> )</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-c-style-for-loop-for----">The &quot;C-style&quot; for loop: for (( ; ; ))<a href="#the-c-style-for-loop-for----" class="hash-link" aria-label="Direct link to The &quot;C-style&quot; for loop: for (( ; ; ))" title="Direct link to The &quot;C-style&quot; for loop: for (( ; ; ))">​</a></h2>
-<p>This loop is very similar to the &quot;for&quot; loop available in the C
-language. The C parenthesis are changed to bash double-parenthesis, to
-invoke the bash arithmetic syntax, and the curly-braces <code>{ }</code> used in C
-are replaced by the bash <em>do</em> and <em>done</em> keywords. The three arguments
-in the double-parenthesis are the initial condition (variable
-initialization), the control condition (an expression that, while true,
-causes the loop to continue), and the increment/decrement (an expression
-which is executed at the end of each loop, which typically increments or
-decrements a counter).</p>
+<p>This loop is very similar to the &quot;for&quot; loop available in the C language. The C parenthesis are changed to bash double-parenthesis, to invoke the bash arithmetic syntax, and the curly-braces <code>{ }</code> used in C are replaced by the bash <em>do</em> and <em>done</em> keywords. The three arguments in the double-parenthesis are the initial condition (variable
+initialization), the control condition (an expression that, while true, causes the loop to continue), and the increment/decrement (an expression which is executed at the end of each loop, which typically increments or decrements a counter).</p>
 <p>For example, this loop counts from 1 to 10:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">for (( i=0; i&lt;=10; i++ ))</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">do</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  echo $i</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">done</span><br></span></code></pre></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="while-expr">while EXPR<a href="#while-expr" class="hash-link" aria-label="Direct link to while EXPR" title="Direct link to while EXPR">​</a></h2>
 <p>This loop continues as long as the expression <em>EXPR</em> is true:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">while [[ &quot;$A&quot; == &quot;$B&quot; ]]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">do</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ... body of the loop ...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">done</span><br></span></code></pre></div></div>
-<p><em>EXPR</em> may be any single bash command, or a list of bash commands
-separated by newline characters (ENTER key) or semicolons, or a pipeline
-of commands. Most commonly it is a <code>test</code> <code>[[</code> command.</p>
+<p><em>EXPR</em> may be any single bash command, or a list of bash commands separated by newline characters (ENTER key) or semicolons, or a pipeline of commands. Most commonly it is a <code>test</code> <code>[[  ]]</code> command.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="until-expr">until EXPR<a href="#until-expr" class="hash-link" aria-label="Direct link to until EXPR" title="Direct link to until EXPR">​</a></h2>
 <p>This loop continues as long as the expression <em>EXPR</em> is false:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">until [[ &quot;$X&quot; -gt &quot;$Y&quot; ]]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">do</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ... body of the loop ...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">done</span><br></span></code></pre></div></div>
-<p>This loop will continue as long as <em>$X</em> is less than or equal to <em>$Y</em>
--- as soon as the expression becomes true (when <em>$X</em> is greater than
-<em>$Y</em>), the loop will stop.</p>
+<p>This loop will continue as long as <code>$X</code> is less than or equal to <code>$Y</code> -- as soon as the expression becomes true (when <code>$X</code> is greater than <code>$Y</code>), the loop will stop.</p>
 <h1>Examples</h1>
 <p>Here are a few bash scripting examples that include loops:</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="tput-colour-codes">tput Colour Codes<a href="#tput-colour-codes" class="hash-link" aria-label="Direct link to tput Colour Codes" title="Direct link to tput Colour Codes">​</a></h2>
