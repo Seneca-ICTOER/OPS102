@@ -14,8 +14,8 @@
 <meta name="msapplication-TileColor" content="#DA291C">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/OPS102/assets/css/styles.966c191a.css">
-<script src="/OPS102/assets/js/runtime~main.ff14b8b4.js" defer="defer"></script>
-<script src="/OPS102/assets/js/main.c48387b1.js" defer="defer"></script>
+<script src="/OPS102/assets/js/runtime~main.e501643a.js" defer="defer"></script>
+<script src="/OPS102/assets/js/main.fc3236be.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -33,19 +33,16 @@ to search for a literal period, we place a backslash in front of it:
 <code>&quot;\.&quot;</code></p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="wildcards">Wildcards<a href="#wildcards" class="hash-link" aria-label="Direct link to Wildcards" title="Direct link to Wildcards">​</a></h2>
 <p>A period <code>&quot;.&quot;</code> will match any single character. Similarly,
-three periods <code>&quot;\...\&quot;</code> will match any three characters.</p>
+three periods <code>&quot;...&quot;</code> will match any three characters.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="bracket-expressions--character-classes">Bracket Expressions / Character Classes<a href="#bracket-expressions--character-classes" class="hash-link" aria-label="Direct link to Bracket Expressions / Character Classes" title="Direct link to Bracket Expressions / Character Classes">​</a></h2>
-<p>Bracket Expressions or Character Classes are contained in square
-brackets <code>&quot;[ ]&quot;</code></p>
+<p>Bracket Expressions or Character Classes are contained in square brackets <code>&quot;[ ]&quot;</code></p>
 <ul>
 <li>
 <p>A list of characters in square brackets will match any <em>one</em> character from 
 the list of characters: <code>&quot;[abc]&quot;</code> will match <code>&quot;a&quot;</code>, <code>&quot;b&quot;</code>, or <code>&quot;c&quot;</code></p>
 </li>
 <li>
-<p>A range of characters in square brackets, written as a starting character, a 
-dash, and an ending character, will match any character in that 
-range: the regular expression <code>&quot;[0-9]&quot;</code> will match any one digit.</p>
+<p>A range of characters in square brackets, written as a starting character, a dash, and an ending character, will match any character in that range: the regular expression <code>&quot;[0-9]&quot;</code> will match any one digit.</p>
 </li>
 <li>
 <p>There are some pre-defined named character classes. These are selected by 
@@ -73,15 +70,13 @@ form feed)</li>
 e.g., <code>&quot;[[[:digit:]]+-.,]&quot;</code> <code>&quot;[[:digit:]][:punct:]]&quot;</code> <code>&quot;[0-9_*]&quot;</code></p>
 </li>
 <li>
-<p>To invert a character class, add a carat ^ character as the first character 
-after the opening square bracket: <code>&quot;[^[:digit:]]&quot;</code> matches any non-digit 
-character, and <code>&quot;[^:]&quot;</code> matches any character that is not a colon.</p>
+<p>To invert a character class, add a carat <code>^</code> character as the first character after the opening square bracket: <code>&quot;[^[:digit:]]&quot;</code> matches any non-digit  character, and <code>&quot;[^:]&quot;</code> matches any character that is not a colon.</p>
 </li>
 <li>
-<p>To include a literal carat, place it at the end of the character class. </p>
+<p>To include a literal carat, place it at the end of the character class.</p>
 </li>
 <li>
-<p>To include a literal dash or closing square bracket, place it at the start 
+<p>To include a literal dash or closing square bracket, place it at the start
 of the character class.</p>
 </li>
 </ul>
@@ -104,8 +99,8 @@ more <code>&quot;x&quot;</code> characters in a row</li>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="alternation">Alternation<a href="#alternation" class="hash-link" aria-label="Direct link to Alternation" title="Direct link to Alternation">​</a></h2>
 <ul>
 <li>The vertical bar indicates alternation - either the expression on the 
-left or the right can be matched: <code>*</code>&quot;hot|cold&quot;<code>*</code> will match <code>*</code>&quot;hot&quot;<code>*</code> 
-or <code>*</code>&quot;cold&quot;`*</li>
+left or the right can be matched: <code>&quot;hot|cold&quot;</code> will match <code>&quot;hot&quot;</code> 
+or `&quot;cold&quot;*</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="grouping">Grouping<a href="#grouping" class="hash-link" aria-label="Direct link to Grouping" title="Direct link to Grouping">​</a></h2>
 <ul>
