@@ -62,7 +62,9 @@ FOR /D %variable IN (files) DO list
 ### Example
 
 ~~~cmd
-@echo off​ SETLOCAL EnableDelayedExpansion​ FOR %%F IN (\*) DO (​
+@echo off​
+SETLOCAL EnableDelayedExpansion​
+FOR %%F IN (\*) DO (​
 
 rem The CHOICE command presents a Y/N choice and sets %ERRORLEVEL%
 rem to 1 if the user selected Y and 2 if the user selected N

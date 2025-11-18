@@ -33,7 +33,7 @@ EXIST filename
 Test for string equality:
 
 ~~~cmd
-`string1`*`==`*`string2`
+string1 == string2
 ~~~
 
 ## Tests Group 3: String and Numeric Comparisons 
@@ -51,7 +51,7 @@ value1 GTR value2    True if the value1 greater than value2​
 value1 GEQ value2    True if the value1 greater than or equal to to value2​
 ~~~
 
-To force a string comparison, enclose *value1* and *value2* in quotes.
+To force a string comparison, enclose `value1` and `value2` in quotes.
 Otherwise, the shell will determine if the variables appear to contain
 integer values and compare them as integers, or otherwise compare them
 as strings.
@@ -75,8 +75,8 @@ Although it\'s probably better to just an integer comparison such as:
 
 ## Notes about IF and these Tests 
 
-- These tests work only with the `*`IF`*` command
-- The IF command can be used with `*`GOTO`*` and a label:
+- These tests work only with the `IF` command
+- The IF command can be used with `GOTO` and a label:
 
 ~~~cmd
 IF test GOTO :skip​
@@ -95,4 +95,4 @@ You can negate (invert) a test with the NOT operator:
 IF NOT EXIST %N% ECHO The file %N% does not exist.
 ~~~
 
-Note that you cannot combine tests - there is no *AND* or *OR* operator.
+Note that you cannot combine tests - there is no `AND` or `OR` operator -- but you can nest tests (which is similar to using `AND`).
