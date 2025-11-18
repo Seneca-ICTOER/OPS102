@@ -15,44 +15,39 @@ to search for a literal period, we place a backslash in front of it:
 ## Wildcards
 
 A period `"."` will match any single character. Similarly,
-three periods `"\...\"` will match any three characters.
+three periods `"..."` will match any three characters.
 
 ## Bracket Expressions / Character Classes 
 
-Bracket Expressions or Character Classes are contained in square
-brackets `"[ ]"`
+Bracket Expressions or Character Classes are contained in square brackets `"[ ]"`
 
 - A list of characters in square brackets will match any *one* character from 
 the list of characters: `"[abc]"` will match `"a"`, `"b"`, or `"c"`
 
-- A range of characters in square brackets, written as a starting character, a 
-dash, and an ending character, will match any character in that 
-range: the regular expression `"[0-9]"` will match any one digit.
+- A range of characters in square brackets, written as a starting character, a dash, and an ending character, will match any character in that range: the regular expression `"[0-9]"` will match any one digit.
 
 - There are some pre-defined named character classes. These are selected by 
 specifying the name of the character class surrounded by colons and square 
 brackets, placed within outer square brackets, like `"[[:digits:]]"`. 
 The available names are:
-  - alnum - alphanumeric
-  - alpha - alphabetic characters
-  - blank - horizontal whitespace (space, tab)
-  - cntrl - control characters (text codes that don't print, such as newline, tab, and bell)
-  - digit - digits
-  - graph - letters, digits, and punctuation
-  - print - letters, digits, punctuation, and space
-  - punct - punctuation marks
-  - space - horizontal and vertical whitespace (space, tab, vertical tab, 
+    - alnum - alphanumeric
+    - alpha - alphabetic characters
+    - blank - horizontal whitespace (space, tab)
+    - cntrl - control characters (text codes that don't print, such as newline, tab, and bell)
+    - digit - digits
+    - graph - letters, digits, and punctuation
+    - print - letters, digits, punctuation, and space
+    - punct - punctuation marks
+    - space - horizontal and vertical whitespace (space, tab, vertical tab, 
 form feed)
-  - upper - UPPERCASE letters
-  - lower - lowercase letters
-  - xdigit - hexidecimal digits (digits plus a-f and A-F)
+    - upper - UPPERCASE letters
+    - lower - lowercase letters
+    - xdigit - hexidecimal digits (digits plus a-f and A-F)
 - Ranges, lists, and named character classes may be combined - 
 e.g., `"[[[:digit:]]+-.,]"` `"[[:digit:]][:punct:]]"` `"[0-9_*]"`
-- To invert a character class, add a carat \^ character as the first character 
-after the opening square bracket: `"[^[:digit:]]"` matches any non-digit 
-character, and `"[^:]"` matches any character that is not a colon.
-- To include a literal carat, place it at the end of the character class. 
-- To include a literal dash or closing square bracket, place it at the start 
+- To invert a character class, add a carat `^` character as the first character after the opening square bracket: `"[^[:digit:]]"` matches any non-digit  character, and `"[^:]"` matches any character that is not a colon.
+- To include a literal carat, place it at the end of the character class.
+- To include a literal dash or closing square bracket, place it at the start
 of the character class.
 
 ## Repetition
@@ -71,8 +66,8 @@ more `"x"` characters in a row
 ## Alternation
 
 - The vertical bar indicates alternation - either the expression on the 
-left or the right can be matched: `*`"hot|cold"`*` will match `*`"hot"`*` 
-or `*`"cold"`*
+left or the right can be matched: `"hot|cold"` will match `"hot"` 
+or `"cold"*
 
 ## Grouping
 

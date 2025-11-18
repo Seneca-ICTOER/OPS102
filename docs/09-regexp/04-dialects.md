@@ -33,8 +33,8 @@ expressions, just like GNU grep).
 
 The Perl language introduced one of the most powerful and consistent
 versions of the regular expression language. There has been increasing
-consensus around \"Perl-Compatible Regular Extensions\" (aka PCRE) and
-that dialect is available in many tools (including GNU grep via the *-P*
+consensus around "Perl-Compatible Regular Extensions" (aka PCRE) and
+that dialect is available in many tools (including GNU grep via the `-P`
 option, as well as the [PCRE/PCRE2
 library](https:*www.pcre.org/ "wikilink") for C and C++ programs, which
 is used in many software packages including Safari and Apache httpd).

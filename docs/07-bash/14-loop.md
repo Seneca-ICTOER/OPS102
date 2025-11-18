@@ -198,7 +198,7 @@ do
       echo "You lose after $TRIES attempts. The number was $SECRET. "
   fi
 
-  tput setaf 15   # White texxt
+  tput setaf 15   # White text
   echo 
   read -p "Do you want to play again (Y/N)? " PLAY
   echo
@@ -206,8 +206,8 @@ do
 done
 tput setaf 5  # Purple text
 
-# In the next line, the multiplication 
-# must preceed the division because 
+# In the next line, the multiplication
+# must preceed the division because
 # this is integer math
 echo "You executed $GAMES missions and succeeded $WINS times ($((WINS*100/GAMES))% success)."
 

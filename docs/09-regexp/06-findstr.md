@@ -11,13 +11,10 @@ impossible to use a literal space in a search pattern. If you wish to
 include a space in your search pattern, prepend `/C:` to your search
 string. You can use multiple `/C:` search strings.
 
-For example, `FINDSTR /R /C:\"red\" /C:\"blue\" INPUTFILE` is roughly
-equivalent to `grep -E \"red\|blue\" INPUTFILE`
+For example, `FINDSTR /R /C:"red" /C:"blue" INPUTFILE` is roughly
+equivalent to `grep -E "red|blue" INPUTFILE`
 
-Findstr is also limited to (approximately) 127 characters in the regular
-expression.
+Findstr is also limited to (approximately) 127 characters in the regular expression.
 
-For information on findstr's regular expression dialect, see 
-`help findstr`. In particular, the findstr command does not support
-alternation with the `|` symbol, repetition other than with the `*`
+For information on findstr's regular expression dialect, see `help findstr`. In particular, the findstr command does not support alternation with the `|` symbol, repetition other than with the `*`
 symbol, named character classes `[[:*name*:]]`, or grouping `( )`.
