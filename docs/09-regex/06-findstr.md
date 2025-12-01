@@ -1,4 +1,4 @@
-# Windows findstr and Regular Expressions 
+`# Windows findstr and Regular Expressions 
 
 The Windows `findstr` command accepts regular expressions or literal
 expressions. It will guess what you're using, and may guess

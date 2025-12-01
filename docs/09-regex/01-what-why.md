@@ -5,5 +5,4 @@ Text". They are used by many different tools and languages, including the Linux 
 
 ## Why should we use Regular Expressions?
 
-Regular Expressions (*regexp* or *regex*) can be a little daunting to learn: they often look like someone was just bashing their head against the keyboard (or, like a cat was walking across the keyboard). But they are very powerful - a well-written regular expression can replace many pages of code in a
-programming language such as C or C++ - and so it is worth investing some time to understand them.
+Regular Expressions (*regexp* or *regex*) can be a little daunting to learn: they often look like someone was just bashing their head against the keyboard (or, like a cat was walking across the keyboard). But they are very powerful: a well-written regular expression can replace many pages of code in a programming language such as C or C++, and so it is worth investing some time to understand them.
