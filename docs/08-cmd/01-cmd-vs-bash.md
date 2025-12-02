@@ -55,7 +55,7 @@ see [https:gitforwindows.org/](https:gitforwindows.org/))​
 
 - PowerShell – installed by default on current Windows systems, it is also 
 available for Linux and Mac OS systems, although it is not commonly used on 
-those systems yet (see [https:*github.com/PowerShell/PowerShell](https:*github.com/PowerShell/PowerShell))​
+those systems yet (see [https://github.com/PowerShell/PowerShell](https://github.com/PowerShell/PowerShell)i )
 
 ## Other Interpreted Languages 
 
