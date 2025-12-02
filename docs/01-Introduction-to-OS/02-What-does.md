@@ -70,16 +70,9 @@ There are many different types of devices that perform similar
 functions, and multiple ways that these devices can be connected. For
 example:
 
-- A keyboard may be connected via a USB connection or a wireless Bluetooth 
-connection, or may be created as a virtual keyboard on a touchscreen.
-- A mouse may be connected via a wired USB, wireless USB dongle, or 
-wireless Bluetooth connection. But there are also other types of devices 
-which can provide the same capability of allowing the user to interact 
-with the display, including trackpads, trackballs, and touchscreens.
-- Sound may be played over built-in speakers, an external analog speaker, 
-an analog headset, a digital speaker or headset with a USB connection, 
-a Bluetooth speaker, earbuds, or headset, or played through a television
-connected via HDMI.
+- A keyboard may be connected via a USB connection or a wireless Bluetooth  connection, or may be created as a virtual keyboard on a touchscreen.
+- A mouse may be connected via a wired USB, wireless USB dongle, or  wireless Bluetooth connection. But there are also other types of devices  which can provide the same capability of allowing the user to interact  with the display, including trackpads, trackballs, and touchscreens.  
+- Sound may be played over built-in speakers, an external analog speaker,  an analog headset, a digital speaker or headset with a USB connection,  a Bluetooth speaker, earbuds, or headset, or played through a television connected via HDMI.
 
 The operating system abstracts away these hardware details. This means
 that programs can access devices in a general way without having to be
@@ -94,7 +87,7 @@ The operating system, computer hardware, and development tools
 "programming model" -- a conceptual framework which software developers
 use when creating software.
 
-As a simple example, several different application program may be
+As a simple example, several different application programs may be
 designed to occupy the same area of memory; obviously, this presents a
 conflict when these applications are used at the same time, so the
 operating system works with the computer's hardware to load the

@@ -14,7 +14,7 @@ bandwidth if the GUI is used over a remote connection.
 
 On the other hand, a CLI is well-suited to task automation, and many
 tasks may require fewer steps to perform than when using a GUI. CLIs
-generall require much less bandwidth when used over a network, making
+generally require much less bandwidth when used over a network, making
 them well-suited to remote administration tasks.
 
 To compare the data demands of the two types of user interfaces,
@@ -22,7 +22,7 @@ consider the amount of information that needs to be sent to the display
 to update it:
 
 -  A GUI on a 1920x1080 ("full high definition") monitor displays about
-6 megabytes of data (2 million pixels x 3 bytes per pixel)
+6 megabytes of data (2 million pixels x 3 bytes per pixel) at one time
 
 -  A CLI (or TUI) on an 80x25 character terminal displays about 
 2 kilobytes of data (0.002 megabytes) at one time

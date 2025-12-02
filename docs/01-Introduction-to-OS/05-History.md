@@ -38,8 +38,8 @@ Intel- and Zilog-based microcomputers.
 Needing an operating system, IBM contacted Microsoft - but their only 
 operating system at the time was Xenix, and the IBM PC was not powerful 
 enough to run Xenix well, so Microsoft licensed (and later purchased) a CP/M 
-clone named 86/DOS (aka QDOS) from a local computer company (Seattle Computer 
-Products). This operating system was used as the basis for Microsoft's DOS 
+clone named 86/DOS (also known as QDOS) from a local computer company named Seattle Computer 
+Products. This operating system was used as the basis for Microsoft's DOS 
 (disk operating system) product, named PC/DOS when marketed by IBM or MS/DOS 
 when marketed by Microsoft.
 
@@ -53,25 +53,25 @@ Xenix (their Unix version), including a heirarchical filesystem.
 
 -  1984 - Richard Stallman created GNU Project and the Free Software Foundation
 to promote the concept of Free Software ("free" in the sense of freedom, not 
-free of cost). The GNU project develops its own version of most of the Unix 
-tools and utilities, and in many cases the GNU versions of the software are 
-better than the versions distributed with Unix. However, the GNU project does 
-not create a kernel, so the GNU software is usually used in conjunction with 
+free of cost). The GNU project developed its own version of most of the Unix 
+tools and utilities, and in many cases the GNU versions of the software were 
+better than the versions distributed with Unix. However, the GNU project did 
+not create a kernel for a long gime, so the GNU software was usually used in conjunction with 
 a commercial Unix system.
 
 -  1984 - The X Window System is first developed at MIT to provide a 
-ross-platform foundation for graphical user interfaces. It becomes widely 
+cross-platform foundation for graphical user interfaces. It becomes widely 
 used on Unix systems sold by many different vendors.
 
 -  1985 - Microsoft introduced Windows 1.0, which was used in conjuction 
 with DOS (users had to purchase both products). Windows provided a graphical 
 user interface and multitasking (though both were initially very limited).
 
--  1991 - Linus Torvalds, a computer science student in Finland, wrote and 
+-  1991 - Linus Torvalds, a computer science student from Finland, wrote and 
 released the Linux kernel. The Linux kernel, combined with software from the 
 GNU project and other free software projects such as the X Window System, 
 made a useful operating system (often referred to as "GNU/Linux" or just 
-Linux"). Many other software developers contribute to the project.
+"Linux"). Many other software developers contributed to the project.
 
 -  1992 - IBM and Microsoft ended their collaboration on OS/2, an advanced 
 operating system with a graphical user interface. IBM continued independent 
