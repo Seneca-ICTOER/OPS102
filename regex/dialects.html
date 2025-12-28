@@ -14,8 +14,8 @@
 <meta name="msapplication-TileColor" content="#DA291C">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/OPS102/assets/css/styles.966c191a.css">
-<script src="/OPS102/assets/js/runtime~main.373645f3.js" defer="defer"></script>
-<script src="/OPS102/assets/js/main.53572121.js" defer="defer"></script>
+<script src="/OPS102/assets/js/runtime~main.f5da2fa7.js" defer="defer"></script>
+<script src="/OPS102/assets/js/main.cf28f868.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -28,9 +28,9 @@ different syntax.</p>
 <p>In particular, the original Unix search tool <em>grep</em> came in three
 varieties:</p>
 <ul>
-<li><code>fgrep</code>, which could search only for fixed text patterns</li>
-<li><code>grep</code>, which handled basic regular expressions</li>
-<li><code>egrep</code>, which handled an extended form of regular expressions</li>
+<li><code>fgrep</code>, which could search only for fixed text patterns</li>
+<li><code>grep</code>, which handled basic regular expressions</li>
+<li><code>egrep</code>, which handled an extended form of regular expressions</li>
 </ul>
 <p>The GNU project originally shipped all three commands, but fgrep and
 egrep were never fully standardized, so they were removed from the Posix
@@ -39,14 +39,14 @@ standard in 2001. They were recently also removed from the GNU project.</p>
 regular expression syntax, in either of two ways:</p>
 <ul>
 <li>
-<p>To use the special characters (called &quot;meta-characters&quot;)
-preceed them with a backslash. In other words, while a backslash makes 
-special characters like . or ordinary, it also makes ordinary 
-characters into special characters.</p>
+<p>To use the special characters (called &quot;meta-characters&quot;)
+preceed them with a backslash. In other words, while a backslash makes
+special characters like . or ordinary, it also makes ordinary
+characters into special characters.</p>
 </li>
 <li>
-<p>Alternately, use the <code>-E</code> option to make grep understand extended 
-regular expressions, which causes metacharacters to become special characters.</p>
+<p>Alternately, use the <code>-E</code> option to make grep understand extended
+regular expressions, which causes metacharacters to become special characters.</p>
 </li>
 </ul>
 <p>Other tools, such as sed, similarly require backslashes in front of some

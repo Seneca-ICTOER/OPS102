@@ -14,8 +14,8 @@
 <meta name="msapplication-TileColor" content="#DA291C">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/OPS102/assets/css/styles.966c191a.css">
-<script src="/OPS102/assets/js/runtime~main.373645f3.js" defer="defer"></script>
-<script src="/OPS102/assets/js/main.53572121.js" defer="defer"></script>
+<script src="/OPS102/assets/js/runtime~main.f5da2fa7.js" defer="defer"></script>
+<script src="/OPS102/assets/js/main.cf28f868.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -39,19 +39,31 @@ them well-suited to remote administration tasks.</p>
 <p>To compare the data demands of the two types of user interfaces,
 consider the amount of information that needs to be sent to the display
 to update it:</p>
-<p>-  A GUI on a 1920x1080 (&quot;full high definition&quot;) monitor displays about
-6 megabytes of data (2 million pixels x 3 bytes per pixel) at one time</p>
-<p>-  A CLI (or TUI) on an 80x25 character terminal displays about 
-2 kilobytes of data (0.002 megabytes) at one time</p>
+<ul>
+<li>
+<p>A GUI on a 1920x1080 (&quot;full high definition&quot;) monitor displays about
+6 megabytes of data (2 million pixels x 3 bytes per pixel) at one time</p>
+</li>
+<li>
+<p>A CLI (or TUI) on an 80x25 character terminal displays about
+2 kilobytes of data (0.002 megabytes) at one time</p>
+</li>
+</ul>
 <p>As an example of the strengths of each type of user interface, consider
 the task of croping, resizing, and changing the format of photographs:</p>
-<p>-  A GUI immediately shows the effect of changes and allows the 
-adjustments to be easily fine-tuned, producing exact results for a small 
-number of photos. However, it may take many steps to perform the edits, 
-so editing hundreds of photographs will take a very long time.</p>
-<p>-  A CLI is well-suited to automation. Edits could be applied to hundreds
-of pictures in a few seconds, <em>if</em> the edits can be adequately described on
-the command-line.</p>
+<ul>
+<li>
+<p>A GUI immediately shows the effect of changes and allows the
+adjustments to be easily fine-tuned, producing exact results for a small
+number of photos. However, it may take many steps to perform the edits,
+so editing hundreds of photographs will take a very long time.</p>
+</li>
+<li>
+<p>A CLI is well-suited to automation. Edits could be applied to hundreds
+of pictures in a few seconds, <em>if</em> the edits can be adequately described on
+the command-line.</p>
+</li>
+</ul>
 <p>A programmer will often use both types of user interfaces in combination. For
 example, they may adjust a sound file using a GUI, then use a CLI to
 place the sound file into a particular folder or directory. This is because

@@ -14,8 +14,8 @@
 <meta name="msapplication-TileColor" content="#DA291C">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/OPS102/assets/css/styles.966c191a.css">
-<script src="/OPS102/assets/js/runtime~main.373645f3.js" defer="defer"></script>
-<script src="/OPS102/assets/js/main.53572121.js" defer="defer"></script>
+<script src="/OPS102/assets/js/runtime~main.f5da2fa7.js" defer="defer"></script>
+<script src="/OPS102/assets/js/main.cf28f868.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -38,88 +38,88 @@ three periods <code>&quot;...&quot;</code> will match any three characters.</p>
 <p>Bracket Expressions or Character Classes are contained in square brackets <code>&quot;[ ]&quot;</code></p>
 <ul>
 <li>
-<p>A list of characters in square brackets will match any  <em>one</em> character from 
-the list of characters: <code>&quot;[abc]&quot;</code> will match <code>&quot;a&quot;</code>, <code>&quot;b&quot;</code>, or <code>&quot;c&quot;</code></p>
+<p>A list of characters in square brackets will match any <em>one</em> character from
+the list of characters: <code>&quot;[abc]&quot;</code> will match <code>&quot;a&quot;</code>, <code>&quot;b&quot;</code>, or <code>&quot;c&quot;</code></p>
 </li>
 <li>
-<p>A range of characters in square brackets, written as a starting character, a dash, and an ending character, will match any character in that range: the regular expression <code>&quot;[0-9]&quot;</code> will match any one digit.</p>
+<p>A range of characters in square brackets, written as a starting character, a dash, and an ending character, will match any character in that range: the regular expression <code>&quot;[0-9]&quot;</code> will match any one digit.</p>
 </li>
 <li>
-<p>There are some pre-defined named character classes. These are selected by 
-specifying the name of the character class surrounded by colons and square 
-brackets, placed within outer square brackets, like <code>&quot;[[:digits:]]&quot;</code>. 
-The available names are:</p>
+<p>There are some pre-defined named character classes. These are selected by
+specifying the name of the character class surrounded by colons and square
+brackets, placed within outer square brackets, like <code>&quot;[[:digits:]]&quot;</code>.
+The available names are:</p>
 <ul>
-<li>alnum - alphanumeric</li>
-<li>alpha - alphabetic characters</li>
-<li>blank - horizontal whitespace (space, tab)</li>
-<li>cntrl - control characters (text codes that don&#x27;t print, such as newline, tab, and bell)</li>
-<li>digit - digits</li>
-<li>graph - letters, digits, and punctuation</li>
-<li>print - letters, digits, punctuation, and space</li>
-<li>punct - punctuation marks</li>
-<li>space - horizontal and vertical whitespace (space, tab, vertical tab, 
-form feed)</li>
-<li>upper - UPPERCASE letters</li>
-<li>lower - lowercase letters</li>
-<li>xdigit - hexidecimal digits (digits plus a-f and A-F)</li>
+<li>alnum - alphanumeric</li>
+<li>alpha - alphabetic characters</li>
+<li>blank - horizontal whitespace (space, tab)</li>
+<li>cntrl - control characters (text codes that don&#x27;t print, such as newline, tab, and bell)</li>
+<li>digit - digits</li>
+<li>graph - letters, digits, and punctuation</li>
+<li>print - letters, digits, punctuation, and space</li>
+<li>punct - punctuation marks</li>
+<li>space - horizontal and vertical whitespace (space, tab, vertical tab,
+form feed)</li>
+<li>upper - UPPERCASE letters</li>
+<li>lower - lowercase letters</li>
+<li>xdigit - hexidecimal digits (digits plus a-f and A-F)</li>
 </ul>
 </li>
 <li>
-<p>Ranges, lists, and named character classes may be combined - 
-e.g., <code>&quot;[[[:digit:]]+-.,]&quot;</code> <code>&quot;[[:digit:]][:punct:]]&quot;</code> <code>&quot;[0-9_*]&quot;</code></p>
+<p>Ranges, lists, and named character classes may be combined -
+e.g., <code>&quot;[[[:digit:]]+-.,]&quot;</code> <code>&quot;[[:digit:]][:punct:]]&quot;</code> <code>&quot;[0-9_*]&quot;</code></p>
 </li>
 <li>
-<p>To invert a character class, add a carat <code>^</code> character as the first character after the opening square bracket: <code>&quot;[^[:digit:]]&quot;</code> matches any non-digit  character, and <code>&quot;[^:]&quot;</code> matches any character that is not a colon.</p>
+<p>To invert a character class, add a carat <code>^</code> character as the first character after the opening square bracket: <code>&quot;[^[:digit:]]&quot;</code> matches any non-digit  character, and <code>&quot;[^:]&quot;</code> matches any character that is not a colon.</p>
 </li>
 <li>
-<p>To include a literal carat, place it at the end of the character class.</p>
+<p>To include a literal carat, place it at the end of the character class.</p>
 </li>
 <li>
-<p>To include a literal dash or closing square bracket, place it at the start
-of the character class.</p>
+<p>To include a literal dash or closing square bracket, place it at the start
+of the character class.</p>
 </li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="repetition">Repetition<a href="#repetition" class="hash-link" aria-label="Direct link to Repetition" title="Direct link to Repetition">​</a></h2>
 <ul>
-<li>A repeat count can be placed in curly brackets. It applies to the previous 
-element:  <code>&quot;x{3}&quot;</code> matches <code>&quot;xxx&quot;</code></li>
-<li>A repeat can be a range, written as <em>min,max</em> in curly brackets: <code>&quot;x{2,5}&quot;</code> 
-will match <code>&quot;xx&quot;</code>, <code>&quot;xxx&quot;</code>, <code>&quot;xxxx&quot;</code>, or <code>&quot;xxxxx&quot;</code></li>
-<li>The maximum value in a range can be omitted: <code>&quot;x{2,}&quot;</code> will match two or 
-more <code>&quot;x&quot;</code> characters in a row</li>
-<li>There are short forms for some commonly-used ranges:<!-- -->
+<li>A repeat count can be placed in curly brackets. It applies to the previous
+element:  <code>&quot;x{3}&quot;</code> matches <code>&quot;xxx&quot;</code></li>
+<li>A repeat can be a range, written as <em>min,max</em> in curly brackets: <code>&quot;x{2,5}&quot;</code>
+will match <code>&quot;xx&quot;</code>, <code>&quot;xxx&quot;</code>, <code>&quot;xxxx&quot;</code>, or <code>&quot;xxxxx&quot;</code></li>
+<li>The maximum value in a range can be omitted: <code>&quot;x{2,}&quot;</code> will match two or
+more <code>&quot;x&quot;</code> characters in a row</li>
+<li>There are short forms for some commonly-used ranges:<!-- -->
 <ul>
-<li><code>&quot;*&quot;</code> is the same as <code>&quot;{0,}&quot;</code> (zero or more)</li>
-<li><code>&quot;+&quot;</code> is the same as <code>&quot;{1,}&quot;</code> (one or more)</li>
-<li><code>&quot;?&quot;</code> is the same as <code>&quot;{0,1}&quot;</code> (zero or one)</li>
+<li><code>&quot;*&quot;</code> is the same as <code>&quot;{0,}&quot;</code> (zero or more)</li>
+<li><code>&quot;+&quot;</code> is the same as <code>&quot;{1,}&quot;</code> (one or more)</li>
+<li><code>&quot;?&quot;</code> is the same as <code>&quot;{0,1}&quot;</code> (zero or one)</li>
 </ul>
 </li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="alternation">Alternation<a href="#alternation" class="hash-link" aria-label="Direct link to Alternation" title="Direct link to Alternation">​</a></h2>
 <ul>
-<li>The vertical bar indicates alternation - either the expression on the 
-left or the right can be matched: <code>&quot;hot|cold&quot;</code> will match <code>&quot;hot&quot;</code> 
-or `&quot;cold&quot;*</li>
+<li>The vertical bar indicates alternation - either the expression on the
+left or the right can be matched: <code>&quot;hot|cold&quot;</code> will match <code>&quot;hot&quot;</code>
+or `&quot;cold&quot;*</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="grouping">Grouping<a href="#grouping" class="hash-link" aria-label="Direct link to Grouping" title="Direct link to Grouping">​</a></h2>
 <ul>
-<li>Elements placed in parenthesis are treated as a group, and can be repeated:
-<code>&quot;(na)* batman&quot;</code> will match <code>&quot;nananana batman&quot;</code> and <code>&quot;nananananananana batman&quot;</code></li>
-<li>Grouping may also be used to limit alternation: <code>&quot;(fire|green)house&quot;</code> will
-match <code>&quot;firehouse&quot;</code> and <code>&quot;greenhouse&quot;</code></li>
+<li>Elements placed in parenthesis are treated as a group, and can be repeated:
+<code>&quot;(na)* batman&quot;</code> will match <code>&quot;nananana batman&quot;</code> and <code>&quot;nananananananana batman&quot;</code></li>
+<li>Grouping may also be used to limit alternation: <code>&quot;(fire|green)house&quot;</code> will
+match <code>&quot;firehouse&quot;</code> and <code>&quot;greenhouse&quot;</code></li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="anchors">Anchors<a href="#anchors" class="hash-link" aria-label="Direct link to Anchors" title="Direct link to Anchors">​</a></h2>
 <ul>
-<li>Anchors match <strong>locations</strong>, not characters.</li>
-<li>A carat symbol will match the start of a line: <code>&quot;^[[:upper:]]&quot;</code> wil match
-lines that start with an uppercase letter.</li>
-<li>A dollar sign will match the end of a line: <code>&quot;[[:punct:]]$&quot;</code> will match
-lines that end with a punctuation mark.</li>
-<li>The two anchors may be used together: <code>&quot;cat&quot;</code> will match the word <code>&quot;cat&quot;</code>
-anywhere on a line, but <code>&quot;^cat$&quot;</code> will only match lines that contain <em>just</em>
-the word <code>&quot;cat&quot;</code> and nothing else. Similarly, <code>&quot;^[[0-9.]]$&quot;</code> will match lines
-that are made up of only digits and dot characters, and <code>&quot;^...$&quot;</code>*<code> or </code>&quot;^.<!-- -->3<!-- -->$&quot;` will only match lines that contain exactly three characters.</li>
+<li>Anchors match <strong>locations</strong>, not characters.</li>
+<li>A carat symbol will match the start of a line: <code>&quot;^[[:upper:]]&quot;</code> wil match
+lines that start with an uppercase letter.</li>
+<li>A dollar sign will match the end of a line: <code>&quot;[[:punct:]]$&quot;</code> will match
+lines that end with a punctuation mark.</li>
+<li>The two anchors may be used together: <code>&quot;cat&quot;</code> will match the word <code>&quot;cat&quot;</code>
+anywhere on a line, but <code>&quot;^cat$&quot;</code> will only match lines that contain <em>just</em>
+the word <code>&quot;cat&quot;</code> and nothing else. Similarly, <code>&quot;^[[0-9.]]$&quot;</code> will match lines
+that are made up of only digits and dot characters, and <code>&quot;^...$&quot;</code>*<code>or</code>&quot;^.<!-- -->3<!-- -->$&quot;` will only match lines that contain exactly three characters.</li>
 </ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/Seneca-ICTOER/OPS102/tree/main/docs/09-regex/02-elements.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/OPS102/regex/what-why"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">What are Regular Expressions?</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/OPS102/regex/examples"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Regular Expression Examples</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#characters" class="table-of-contents__link toc-highlight">Characters</a></li><li><a href="#wildcards" class="table-of-contents__link toc-highlight">Wildcards</a></li><li><a href="#bracket-expressions--character-classes" class="table-of-contents__link toc-highlight">Bracket Expressions / Character Classes</a></li><li><a href="#repetition" class="table-of-contents__link toc-highlight">Repetition</a></li><li><a href="#alternation" class="table-of-contents__link toc-highlight">Alternation</a></li><li><a href="#grouping" class="table-of-contents__link toc-highlight">Grouping</a></li><li><a href="#anchors" class="table-of-contents__link toc-highlight">Anchors</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Operating Systems for Programmers</div><ul class="footer__items clean-list"><li class="footer__item"><a href="#" id="pwa-button" class="footer__link-item" hidden>Install as an App</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Seneca Polytechnic.</div></div></div></footer></div>
 </body>
 </html>
