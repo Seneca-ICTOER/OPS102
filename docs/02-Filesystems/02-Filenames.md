@@ -20,14 +20,14 @@ leaf\" may be interpreted as two separate filenames if written without
 quoting:
 
 ```plain
-ls red leaf
+ls red leaf
 ```
 
 When quotes are added, the ambiguity is removed, and the shell will
 correctly interpret the filename as a single name:
 
 ```plain
-ls "red leaf"
+ls "red leaf"
 ```
 
 For this reason, it is good practice to avoid using spaces in filenames

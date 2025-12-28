@@ -32,7 +32,7 @@ Here is a simple example script using two commands, *echo* and *date*:
 
 ~~~bash
 #!/usr/bin/bash
-echo "The current date and time is:"
+echo "The current date and time is:"
 date
 ~~~
 
@@ -42,7 +42,7 @@ If this is save into the file named \"now\", the permission could be set
 with this command:
 
 ~~~plain
-$ chmod u+rx now
+$ chmod u+rx now
 ~~~
 
 The script can then be executed. Normally, the current working directory
@@ -50,7 +50,7 @@ is not searched, so to run the a script in the current directory, you
 will need to explicitly specify the directory name like this:
 
 ~~~plain
-$ ./now
-The current date and time is:
-Sat Mar  6 12:03:32 EST 2038
+$ ./now
+The current date and time is:
+Sat Mar  6 12:03:32 EST 2038
 ~~~

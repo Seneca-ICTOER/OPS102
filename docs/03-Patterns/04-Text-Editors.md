@@ -47,7 +47,7 @@ a filename to be edited:
 
 ~~~plain
 notepad
-notepad file
+notepad file
 ~~~
 
 ## Other Text Editors 
@@ -60,21 +60,21 @@ editors similar to *notepad* are available on Linux.
 There are also several categories of software that are (arguably) a type
 of text editor, including:
 
-1. Basic text editors
-1. Code editors, for editing software and configuration files, with features such as tooltip help, syntax highlighting, bracket matching, and automatic indentation
-1. Word processors, for editing documents, with features such as spell 
-checking, visual formatting, advanced layout features such as columns
-and tables
+1. Basic text editors
+1. Code editors, for editing software and configuration files, with features such as tooltip help, syntax highlighting, bracket matching, and automatic indentation
+1. Word processors, for editing documents, with features such as spell 
+checking, visual formatting, advanced layout features such as columns
+and tables
 
 Software developers and system administrators have strong opinions about
 their tools, and particularly about their text editors. Things to
 consider when selecting any type of text editor include:
 
-- Interface: does the editor use a graphical user interface, a text user interface, or can it operate in both modes?
-- Tools: does the editor have useful tools such as syntax highlighting for common languages and configuration files? Does the list of supported languages include the ones you want to use?
-- Visual complexity: some users prefer an editor with on-screen controls (or help) for most or all of the actions they may perform so that they can access these features quickly. Others prefer a less-cluttered screen which dedicates maximum screen space to content and minimizes distractions.
-- Previews and integration with other tools: can the software provide visual previews, such as HTML and CSS display for web documents, LaTeX rendering, and accessibility assessments? Can you directly invoke publishing, content conversion, file transfer, or compilation processes from within the editor?
-- Feature control: can you easily turn features on and off? For example, can you disable spell checking or syntax highlighting if your file contains a section that is in a different language? Can you disable auto-correction when it is not relevant to the project at hand?
+- Interface: does the editor use a graphical user interface, a text user interface, or can it operate in both modes?
+- Tools: does the editor have useful tools such as syntax highlighting for common languages and configuration files? Does the list of supported languages include the ones you want to use?
+- Visual complexity: some users prefer an editor with on-screen controls (or help) for most or all of the actions they may perform so that they can access these features quickly. Others prefer a less-cluttered screen which dedicates maximum screen space to content and minimizes distractions.
+- Previews and integration with other tools: can the software provide visual previews, such as HTML and CSS display for web documents, LaTeX rendering, and accessibility assessments? Can you directly invoke publishing, content conversion, file transfer, or compilation processes from within the editor?
+- Feature control: can you easily turn features on and off? For example, can you disable spell checking or syntax highlighting if your file contains a section that is in a different language? Can you disable auto-correction when it is not relevant to the project at hand?
 
 Most software developers and system administrators use multiple editors
 for different tasks - for example, they may choose one editor for quick

@@ -9,14 +9,14 @@ By default, three channels are opened automatically by the shell when a
 process is started. These are:
 
 ```plain
-0 - Standard Input (stdin) - this is the default input channel for 
-    the program
+0 - Standard Input (stdin) - this is the default input channel for 
+    the program
 
-1 - Standard Output (stdout) - this is the default output channel 
-    for the program, used to output "normal" messages
+1 - Standard Output (stdout) - this is the default output channel 
+    for the program, used to output "normal" messages
 
-2 - Standard Error (stderr) - this is the default error channel 
-    for the program, used to output error messages
+2 - Standard Error (stderr) - this is the default error channel 
+    for the program, used to output error messages
 ```
 
 Without redirection, all three of these descriptors/handles are

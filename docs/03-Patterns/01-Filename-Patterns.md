@@ -38,13 +38,13 @@ globbing.
 Therefore the command 
 
 ```plain
-del *.pdf
+del *.pdf
 ```
 
 on Windows, or
 
 ```plain
-rm *.pdf
+rm *.pdf
 ``` 
 
 on Linux will remove all files in the current directory that have the
@@ -54,7 +54,7 @@ You can combine absolute, relative, or relative-to-home pathnames with
 patterns. For example, in the command:
 
 ```plain
- del \Users\jdoe\Documents\*.txt
+ del \Users\jdoe\Documents\*.txt
 ```
 the pattern \\Users\\jdoe\\Documents\\\*.txt* will match all files with
 a *txt* extension in the *\\Users\\jdoe\\Documents\\* directory, and the
@@ -63,7 +63,7 @@ a *txt* extension in the *\\Users\\jdoe\\Documents\\* directory, and the
 On Linux, you can also use patterns to match directory names:
 
 ```plain
- rm /home/chris/ops102/*/info.pdf
+ rm /home/chris/ops102/*/info.pdf
 ```
 
 This will delete any files named *info.pdf* within any subdirectory of

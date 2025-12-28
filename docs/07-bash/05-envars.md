@@ -11,14 +11,14 @@ and are commonly used to pass configuration information to programs.
 To create an environment variable named X with a value of 999:
 
 ~~~plain
-$ X=999
-$ export X
+$ X=999
+$ export X
 ~~~
 
 Or in a single step:
 
 ~~~plain
-$ export X=999
+$ export X=999
 ~~~
 
 You can view all of the current variables (and shell functions) with the

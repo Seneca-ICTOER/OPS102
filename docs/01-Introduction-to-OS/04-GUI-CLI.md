@@ -21,23 +21,23 @@ To compare the data demands of the two types of user interfaces,
 consider the amount of information that needs to be sent to the display
 to update it:
 
--  A GUI on a 1920x1080 ("full high definition") monitor displays about
-6 megabytes of data (2 million pixels x 3 bytes per pixel) at one time
+-  A GUI on a 1920x1080 ("full high definition") monitor displays about
+6 megabytes of data (2 million pixels x 3 bytes per pixel) at one time
 
--  A CLI (or TUI) on an 80x25 character terminal displays about 
-2 kilobytes of data (0.002 megabytes) at one time
+-  A CLI (or TUI) on an 80x25 character terminal displays about 
+2 kilobytes of data (0.002 megabytes) at one time
 
 As an example of the strengths of each type of user interface, consider
 the task of croping, resizing, and changing the format of photographs:
 
--  A GUI immediately shows the effect of changes and allows the 
-adjustments to be easily fine-tuned, producing exact results for a small 
-number of photos. However, it may take many steps to perform the edits, 
-so editing hundreds of photographs will take a very long time. 
+-  A GUI immediately shows the effect of changes and allows the 
+adjustments to be easily fine-tuned, producing exact results for a small 
+number of photos. However, it may take many steps to perform the edits, 
+so editing hundreds of photographs will take a very long time. 
 
--  A CLI is well-suited to automation. Edits could be applied to hundreds
-of pictures in a few seconds, *if* the edits can be adequately described on
-the command-line.
+-  A CLI is well-suited to automation. Edits could be applied to hundreds
+of pictures in a few seconds, *if* the edits can be adequately described on
+the command-line.
 
 A programmer will often use both types of user interfaces in combination. For 
 example, they may adjust a sound file using a GUI, then use a CLI to

@@ -7,11 +7,11 @@ An operating system performs four main functions:
 Think of the specifications that were advertised when you bought your
 last computer (or smartphone):
 
-- multiple CPU cores
-- several gigabytes of RAM memory
-- storage in the gigabytes to terabytes range
-- a display with a particular resolution
-- various peripherals, such as cameras, speakers, and so forth
+- multiple CPU cores
+- several gigabytes of RAM memory
+- storage in the gigabytes to terabytes range
+- a display with a particular resolution
+- various peripherals, such as cameras, speakers, and so forth
 
 All of these are system resources. The operating system manages these
 resources to ensure that they are used effectively, and to ensure that
@@ -70,9 +70,9 @@ There are many different types of devices that perform similar
 functions, and multiple ways that these devices can be connected. For
 example:
 
-- A keyboard may be connected via a USB connection or a wireless Bluetooth  connection, or may be created as a virtual keyboard on a touchscreen.
-- A mouse may be connected via a wired USB, wireless USB dongle, or  wireless Bluetooth connection. But there are also other types of devices  which can provide the same capability of allowing the user to interact  with the display, including trackpads, trackballs, and touchscreens.  
-- Sound may be played over built-in speakers, an external analog speaker,  an analog headset, a digital speaker or headset with a USB connection,  a Bluetooth speaker, earbuds, or headset, or played through a television connected via HDMI.
+- A keyboard may be connected via a USB connection or a wireless Bluetooth  connection, or may be created as a virtual keyboard on a touchscreen.
+- A mouse may be connected via a wired USB, wireless USB dongle, or  wireless Bluetooth connection. But there are also other types of devices  which can provide the same capability of allowing the user to interact  with the display, including trackpads, trackballs, and touchscreens.  
+- Sound may be played over built-in speakers, an external analog speaker,  an analog headset, a digital speaker or headset with a USB connection,  a Bluetooth speaker, earbuds, or headset, or played through a television connected via HDMI.
 
 The operating system abstracts away these hardware details. This means
 that programs can access devices in a general way without having to be

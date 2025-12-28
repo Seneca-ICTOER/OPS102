@@ -29,11 +29,11 @@ To access a variable, place a dollar sign \[\$\] in front of it, and use
 it in a command as an argument (or as a command name):
 
 ~~~bash
-$ B=World
-$ echo $B
+$ B=World
+$ echo $B
 World
-$ echo Hello $B
-Hello World
+$ echo Hello $B
+Hello World
 ~~~
 
 ## Quoting
@@ -45,13 +45,13 @@ Spaces and tabs are used to split a bash command line into individual
 it will be treated as two separate arguments:
 
 ~~~plain
-$ mkdir test
-$ cd test           # this is new so it will be empty
-$ touch new file
-$ ls -l
-total 0                                                                                                                 
--rw------- 1 chris.tyler users 0 Mar  6 12:12 file                                                                      
--rw------- 1 chris.tyler users 0 Mar  6 12:12 new    
+$ mkdir test
+$ cd test           # this is new so it will be empty
+$ touch new file
+$ ls -l
+total 0                                                                                                                 
+-rw------- 1 chris.tyler users 0 Mar  6 12:12 file                                                                      
+-rw------- 1 chris.tyler users 0 Mar  6 12:12 new    
 ~~~
 
 Notice that *touch new file* created two files, because *new* and *file*
@@ -60,12 +60,12 @@ were treated as separate arguments.
 To prevent word splitting, quote the text.
 
 ~~~plain
-$ mkdir test
-$ cd test          # this directory is new so it will be empty
-$ touch "new file"
-$ ls -l 
-total 0                                                                                                                 
--rw------- 1 chris.tyler users 0 Mar  6 12:15 new file 
+$ mkdir test
+$ cd test          # this directory is new so it will be empty
+$ touch "new file"
+$ ls -l 
+total 0                                                                                                                 
+-rw------- 1 chris.tyler users 0 Mar  6 12:15 new file 
 ~~~
 
 Notice that only one file was created by the command `touch \"new
@@ -76,7 +76,7 @@ You\'ll also need to use quoting when assigning a string variable value
 containing a space:
 
 ~~~plain
-$ A="Seneca Polytechnic"
+$ A="Seneca Polytechnic"
 ~~~
 
 You can quote text with single-quotes \[\'\] or double-quotes \[\"\].
@@ -84,11 +84,11 @@ Variable expansion takes place inside double quotes (this is called
 *interpolation*), but not inside single quotes:
 
 ~~~plain
-$ B=World
-$ echo "Hello $B"    # notice that $B is replaced with the value of B
-Hello World
-$ echo 'Hello $B'    # notice that $B used as-in
-Hello $B
+$ B=World
+$ echo "Hello $B"    # notice that $B is replaced with the value of B
+Hello World
+$ echo 'Hello $B'    # notice that $B used as-in
+Hello $B
 ~~~
 
 You should always double-quote variables that may contain a space in
@@ -102,16 +102,16 @@ Here is an example \-- the difference between the first *ls* statement
 (where the variable expansion is double-quoted):
 
 ~~~plain
-$ touch "red maple"
+$ touch "red maple"
 
-$ FILE="red maple"
+$ FILE="red maple"
 
-$ ls $FILE
-ls: cannot access 'red': No such file or directory
-ls: cannot access 'maple': No such file or directory
+$ ls $FILE
+ls: cannot access 'red': No such file or directory
+ls: cannot access 'maple': No such file or directory
 
-$ ls "$FILE"
-'red maple'
+$ ls "$FILE"
+'red maple'
 ~~~
 
 ### Backslashes
@@ -121,15 +121,15 @@ instructs the shell to ignore any special meaning that the following
 character may have. Examples:
 
 ~~~plain
-$ touch "new file"
-$ ls -l new\ file     # The space loses its special meaning as an argument separator
--rw-r--r--. 1 chris chris 0 Jun 18 22:49 'new file'
+$ touch "new file"
+$ ls -l new\ file     # The space loses its special meaning as an argument separator
+-rw-r--r--. 1 chris chris 0 Jun 18 22:49 'new file'
 
-$ echo "This string contains a \"quoted\" string"
-This string contains a "quoted" string
+$ echo "This string contains a \"quoted\" string"
+This string contains a "quoted" string
 
-$ A=Testing
-$ echo "  \$A"   # The dollar sign loses its special meaning
-  $A
+$ A=Testing
+$ echo "  \$A"   # The dollar sign loses its special meaning
+  $A
 ~~~
 

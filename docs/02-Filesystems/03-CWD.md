@@ -9,7 +9,7 @@ To change the current working directory on Linux or on Windows, use the
 *cd* command followed by a directory name:
 
 ```plain
-cd ops102
+cd ops102
 ```
 
 To see the name of the current directory, use the command *pwd* (Print

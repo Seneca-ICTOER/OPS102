@@ -9,8 +9,8 @@ commands.** In Windows, the filename extension is used to associate a
 file with a program, and this mechanism is used to associate a script
 with a command interpreter.​ ​
 
-- For CMD scripts, the extension ".cmd" is used.​ For historical reasons, the extension ".bat" is also accepted.​
-- For PowerShell scripts, the extension ".ps1" is used.​ The reason that ".ps" isn't used is that that extension was already used for PostScript files.​ (As a reminder: We're not going to write PowerShell scripts in this course).​
+- For CMD scripts, the extension ".cmd" is used.​ For historical reasons, the extension ".bat" is also accepted.​
+- For PowerShell scripts, the extension ".ps1" is used.​ The reason that ".ps" isn't used is that that extension was already used for PostScript files.​ (As a reminder: We're not going to write PowerShell scripts in this course).​
 
 3\. **Ensure that the script file has the appropriate permissions.​**
 On Windows, the ability to read the script file is sufficient (and this

@@ -5,13 +5,13 @@ Bash can perform integer arithmetic.
 To evaluate an arithmetic expression and return a value, use *\$(( ))*:
 
 ~~~plain
-$ A=100
-$ B=12
-$ echo $((A*B))
+$ A=100
+$ B=12
+$ echo $((A*B))
 1200
-$ echo $((B++))
+$ echo $((B++))
 12
-$ echo $B
+$ echo $B
 13
 ~~~
 
@@ -23,12 +23,12 @@ To evaluate an arithmetic expression without returning a value, use *((
 ))*:
 
 ~~~plain
-$ A=100
-$ B=13
-$ ((A++))
-$ echo $A
+$ A=100
+$ B=13
+$ ((A++))
+$ echo $A
 101
-$ ((C=A*B*2))
-$ echo "The answer is $C"
-The answer is 2626
+$ ((C=A*B*2))
+$ echo "The answer is $C"
+The answer is 2626
 ~~~

@@ -6,8 +6,8 @@ To set a variable, use the *set* keyword with a variable name, an equal
 sign, and the variable value:
 
 ~~~cmd
-set A=5
-set B=World
+set A=5
+set B=World
 ~~~
 
 If the variable does not exist, it will be created. If it does exist,
@@ -28,11 +28,11 @@ To access a variable, place a percent sign \[%\] on either side of it,
 and use it in a command as an argument (or as a command name):
 
 ~~~cmd
-> SET B=World
-> echo %B%
+> SET B=World
+> echo %B%
 World
-> echo Hello $B
-Hello World
+> echo Hello $B
+Hello World
 ~~~
 
 ## Quoting
@@ -46,19 +46,19 @@ included as part of the string or argument in most cases, but not when
 dealing with a filename:​
 
 ~~~cmd
-> ECHO "Hello"​
+> ECHO "Hello"​
 "Hello"​
 
-> ECHO test > "test file"​
+> ECHO test > "test file"​
 ~~~
 
 ​Quoting is not required when assigning a string value which contains
 spaces to a variable:
 
 ~~~cmd
-> SET A=One Two Three
-> ECHO %A%
-One Two Three
+> SET A=One Two Three
+> ECHO %A%
+One Two Three
 ~~~
 
 ## Carat Symbols 
@@ -69,8 +69,8 @@ symbol would normally cause an error, but it can be treated as a regular
 character by escaping it with a carat:
 
 ~~~cmd
-> echo Lost ^& Found
-Lost & Found
+> echo Lost ^& Found
+Lost & Found
 ~~~
 
 
@@ -79,6 +79,6 @@ and it is necessary to use triple carat symbols \^\^\^ to escape
 characters:​
 
 ~~~cmd
-> echo Lost ^^^& Found | find "Lost" ​
-Lost & Found ​
+> echo Lost ^^^& Found | find "Lost" ​
+Lost & Found ​
 ~~~

@@ -6,14 +6,14 @@ operating system.
 One or more of these three broad categories of resources constrain
 (limit) the system\'s ability to execute each running program:
 
-- **Memory** - The availability of adequate memory, and the 
-performance of that memory.
+- **Memory** - The availability of adequate memory, and the 
+performance of that memory.
 
-- **CPU** - The ability of the CPU to execute the instructions 
-contained in the program at a particular speed.
+- **CPU** - The ability of the CPU to execute the instructions 
+contained in the program at a particular speed.
 
-- **Input/Output** (I/O) - This is a very broad category that 
-includes storage, networking, printers, keyboard and mouse, and so forth.
+- **Input/Output** (I/O) - This is a very broad category that 
+includes storage, networking, printers, keyboard and mouse, and so forth.
 
 ## Processes
 
@@ -58,31 +58,31 @@ On contemporary computer systems, memory is very actively and
 dynamically managed by the Operating System using the hardware\'s
 virtual memory features. This enables many useful techniques, including:
 
-- Demand Loading - Only the portion of programs which are used are loaded. 
-Code for features that are not used is not loaded into memory. For example,
-in a word processor (such as LibreOffice/OpenOffice or Word), features such 
-as table of content generation, endnotes, and watermarks are not used in 
-many documents, and the code for those features will not be loaded in many 
+- Demand Loading - Only the portion of programs which are used are loaded. 
+Code for features that are not used is not loaded into memory. For example,
+in a word processor (such as LibreOffice/OpenOffice or Word), features such 
+as table of content generation, endnotes, and watermarks are not used in 
+many documents, and the code for those features will not be loaded in many 
 cases.
-- Sharing of Memory - Shared libraries (also called Dynamically Linked 
-Libraries) may be used by many different processes. These libraries are 
-loaded into memory only once, using demand loading, regardless of the 
-number of processes using each library. Similarly, a program which is 
-running in two or more processes will be loaded into memory only once, 
-and shared between the processes. This significantly reduces memory 
+- Sharing of Memory - Shared libraries (also called Dynamically Linked 
+Libraries) may be used by many different processes. These libraries are 
+loaded into memory only once, using demand loading, regardless of the 
+number of processes using each library. Similarly, a program which is 
+running in two or more processes will be loaded into memory only once, 
+and shared between the processes. This significantly reduces memory 
 requirements.
-- Swap - When system memory (RAM) is approaching full utilization, 
-the operating system may take some of the least-recently-used areas of 
-memory and place them in storage (hard disk or solid state disk) or compress 
-them in order to avoid running out of free memory. Areas of memory swapped 
-out may be swapped back in if they are later required.
+- Swap - When system memory (RAM) is approaching full utilization, 
+the operating system may take some of the least-recently-used areas of 
+memory and place them in storage (hard disk or solid state disk) or compress 
+them in order to avoid running out of free memory. Areas of memory swapped 
+out may be swapped back in if they are later required.
 
 Due to the utilization of these techniques and others, the memory
 consumption of a program can be calculated in many different ways. For
 example:
 
-- You could add up the full size of the program, all of the shared libraries, and the data used by a process, but that would yield a large number (a pessimistic view of memory consumption). The process is likely not occupying that much memory, and terminating the process will typically release only a fraction of that memory because most of the shared libraries will still be loaded into memory and in use by other programs.
-- You could add up just the portion of the program in memory plus the data area in memory used by a process, but this would understate the full memory utilization because it does not include the shared libraries nor the portion of the program or data which has been swapped out or which has not (yet) been demand-loaded.
+- You could add up the full size of the program, all of the shared libraries, and the data used by a process, but that would yield a large number (a pessimistic view of memory consumption). The process is likely not occupying that much memory, and terminating the process will typically release only a fraction of that memory because most of the shared libraries will still be loaded into memory and in use by other programs.
+- You could add up just the portion of the program in memory plus the data area in memory used by a process, but this would understate the full memory utilization because it does not include the shared libraries nor the portion of the program or data which has been swapped out or which has not (yet) been demand-loaded.
 
 Therefore resource monitoring tools may present several different
 statistics about memory usage for each process, or may try to present a

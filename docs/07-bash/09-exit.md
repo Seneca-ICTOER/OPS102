@@ -19,14 +19,14 @@ command executed by the shell.
 For example:
 
 ~~~plain
-$ ls -d /etc
+$ ls -d /etc
 /etc
-$ echo $?
+$ echo $?
 0
 
-$ ls -d /this/does/not/exist
-ls: cannot access '/this/does/not/exist': No such file or directory
-$ echo $?
+$ ls -d /this/does/not/exist
+ls: cannot access '/this/does/not/exist': No such file or directory
+$ echo $?
 2
 ~~~
 

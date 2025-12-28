@@ -6,12 +6,12 @@ optional; if included, the first conditional commands should be placed
 in parenthesis.​
 
 ~~~cmd
-> set A=Blue                                       ​
-> set B=Orange​
-> set C=Blue​
-​> if %A%==%C% echo Strings A and C match​
-Strings A and C match​
-> if %A%==%B% (echo Same!) else echo Different!​
+> set A=Blue                                       ​
+> set B=Orange​
+> set C=Blue​
+​> if %A%==%C% echo Strings A and C match​
+Strings A and C match​
+> if %A%==%B% (echo Same!) else echo Different!​
 Different!
 ~~~
 
@@ -25,7 +25,7 @@ Tests that a filename exists (regardless of the entry type: file or
 directory):
 
 ~~~cmd
-EXIST filename
+EXIST filename
 ~~~
 
 ## Tests Group 2: String Equality 
@@ -43,12 +43,12 @@ which are compared. Adding the /i switch will make string comparisons
 case-insensitive (UPPER/lowercase).​
 
 ~~~cmd
-value1 EQU value2    True if the values are equal​
-value1 NEQ value2    True if the values are not equal​
-value1 LSS value2    True if the value1 less than value2 ​
-value1 LEQ value2    True if the value1 less/equal to value2​
-value1 GTR value2    True if the value1 greater than value2​
-value1 GEQ value2    True if the value1 greater than or equal to to value2​
+value1 EQU value2    True if the values are equal​
+value1 NEQ value2    True if the values are not equal​
+value1 LSS value2    True if the value1 less than value2 ​
+value1 LEQ value2    True if the value1 less/equal to value2​
+value1 GTR value2    True if the value1 greater than value2​
+value1 GEQ value2    True if the value1 greater than or equal to to value2​
 ~~~
 
 To force a string comparison, enclose `value1` and `value2` in quotes.
@@ -61,13 +61,13 @@ as strings.
 Test to see if a variable is defined​: ​
 
 ~~~cmd
-DEFINED variable    True if variable is defined​
+DEFINED variable    True if variable is defined​
 ~~~
 
 Test to see if the ERRORLEVEL is above a threshold​:
 
 ~~~cmd
-ERRORLEVEL value    True if ERORRLEVEL>=value​
+ERRORLEVEL value    True if ERORRLEVEL>=value​
 ~~~
 
 Although it\'s probably better to just an integer comparison such as:
@@ -75,11 +75,11 @@ Although it\'s probably better to just an integer comparison such as:
 
 ## Notes about IF and these Tests 
 
-- These tests work only with the `IF` command
-- The IF command can be used with `GOTO` and a label:
+- These tests work only with the `IF` command
+- The IF command can be used with `GOTO` and a label:
 
 ~~~cmd
-IF test GOTO :skip​
+IF test GOTO :skip​
 ...​
 :skip​
 ~~~
@@ -92,7 +92,7 @@ loop, regardless of where the label is located!​
 You can negate (invert) a test with the NOT operator:
 
 ~~~cmd
-IF NOT EXIST %N% ECHO The file %N% does not exist.
+IF NOT EXIST %N% ECHO The file %N% does not exist.
 ~~~
 
 Note that you cannot combine tests - there is no `AND` or `OR` operator -- but you can nest tests (which is similar to using `AND`).

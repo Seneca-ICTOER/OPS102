@@ -19,16 +19,16 @@ body of the loop is executed for each value. The list of values may be
 constants:
 
 ~~~bash
-for X in 1 2 3
+for X in 1 2 3
 do
-  ... body of the loop ...
+  ... body of the loop ...
 done
 ~~~
 
 ~~~bash
-for COLOUR in red green blue
+for COLOUR in red green blue
 do
-  ... body of the loop ...
+  ... body of the loop ...
 done
 ~~~
 
@@ -36,18 +36,18 @@ Or the list may be the list of parameters (arguments to the script),
 written as `"$@"`:
 
 ~~~bash
-for A in "$@"
+for A in "$@"
 do
-  ... body of the loop ...
+  ... body of the loop ...
 done
 ~~~
 
 The most common use of this type of loop may be one or more globbing patterns (filename patterns with wildcard characters), which will be replaced with a list of all matching filenames:
 
 ~~~bash
-for SOURCEFILE in *.c
+for SOURCEFILE in *.c
 do
-  ... body of the loop ...
+  ... body of the loop ...
 done
 ~~~
 
@@ -56,14 +56,14 @@ One thing to remember with this last form of the loop is that *if the pattern do
 This can be used in various ways. For example, this loop will compile all of the C source files found in the current directory:
 
 ~~~bash
-for SOURCEFILE in *.c
+for SOURCEFILE in *.c
 do
-  echo "=== Compiling $SOURCEFILE ==="
-  
-  # This next line removes the extension from the filename
-  BINARY="$(echo $SOURCEFILE | cut -d. -f1)"
-  
-  gcc SOURCEFILE -o $BINARY
+  echo "=== Compiling $SOURCEFILE ==="
+  
+  # This next line removes the extension from the filename
+  BINARY="$(echo $SOURCEFILE | cut -d. -f1)"
+  
+  gcc SOURCEFILE -o $BINARY
 done
 ~~~
 
@@ -77,9 +77,9 @@ initialization), the control condition (an expression that, while true, causes t
 For example, this loop counts from 1 to 10:
 
 ~~~bash
-for (( i=0; i<=10; i++ ))
+for (( i=0; i<=10; i++ ))
 do
-  echo $i
+  echo $i
 done
 ~~~
 
@@ -88,9 +88,9 @@ done
 This loop continues as long as the expression *EXPR* is true:
 
 ~~~bash
-while [[ "$A" == "$B" ]]
+while [[ "$A" == "$B" ]]
 do
-  ... body of the loop ...
+  ... body of the loop ...
 done
 ~~~
 
@@ -101,9 +101,9 @@ done
 This loop continues as long as the expression *EXPR* is false:
 
 ~~~bash
-until [[ "$X" -gt "$Y" ]]
+until [[ "$X" -gt "$Y" ]]
 do
-  ... body of the loop ...
+  ... body of the loop ...
 done
 ~~~
 
@@ -124,12 +124,12 @@ available colours, this script can be used:
 
 ~~~bash
 #!/usr/bin/bash
-for ((C=0; C<16; C++))
+for ((C=0; C<16; C++))
 do
-  tput setaf $C   # Set foreground to colour $C
-  echo "Colour $C"
+  tput setaf $C   # Set foreground to colour $C
+  echo "Colour $C"
 done
-tput sgr0   # Reset to "normal" text mode
+tput sgr0   # Reset to "normal" text mode
 ~~~
 
 ## Number-Guessing Game 
@@ -141,76 +141,76 @@ what effect your changes have):
 ~~~bash
 #!/usr/bin/bash
 
-MAX=100       # Maximum value of secret
-MAX_TRIES=7   # Maximum number of tries (guesses)
-GAMES=0       # How many games have been played
-WINS=0        # How many games the user has won
+MAX=100       # Maximum value of secret
+MAX_TRIES=7   # Maximum number of tries (guesses)
+GAMES=0       # How many games have been played
+WINS=0        # How many games the user has won
 
-clear     # Clear the screen
-tput setaf 5  # Select purple text
-echo "=== Number-Guessing Game ==="
+clear     # Clear the screen
+tput setaf 5  # Select purple text
+echo "=== Number-Guessing Game ==="
 echo
-echo "I have a secret number between 1 and $MAX"
-echo "Your mission is to guess it in as few tries as possible."
-echo "You have a maximum of $MAX_TRIES guesses to succeed."
+echo "I have a secret number between 1 and $MAX"
+echo "Your mission is to guess it in as few tries as possible."
+echo "You have a maximum of $MAX_TRIES guesses to succeed."
 echo
 
 PLAY="Y"
-# This next loop continues until the user says
-# they don't want to play again
-while [[ "$PLAY" == "Y" || "$PLAY" == "y" || "$PLAY" == "YES" ||
-     "$PLAY" == "Yes" || "$PLAY" == "yes" ]]
+# This next loop continues until the user says
+# they don't want to play again
+while [[ "$PLAY" == "Y" || "$PLAY" == "y" || "$PLAY" == "YES" ||
+     "$PLAY" == "Yes" || "$PLAY" == "yes" ]]
 do
-      # Generate a random number from 1-MAX
-  SECRET=$(( RANDOM % MAX + 1 ))  
+      # Generate a random number from 1-MAX
+  SECRET=$(( RANDOM % MAX + 1 ))  
 
-      # Un-comment this line when debugging!
-      # echo "NOTE: the secret number is $SECRET"
+      # Un-comment this line when debugging!
+      # echo "NOTE: the secret number is $SECRET"
 
-  GUESS=0
-  TRIES=0
-  ((GAMES++))
+  GUESS=0
+  TRIES=0
+  ((GAMES++))
 
-  # This next loop continues until the user guess correctly
-  # or the maximum number of guesses is exhausted
-  until `[`| $TRIES -ge $MAX_TRIES `]($GUESS_-eq_$SECRET "wikilink")\
-  do
-      tput setaf 15   # White text
-      read -p "Enter your guess (#$((++TRIES))): " GUESS
-      if `[`$GUESS -gt $SECRET`]($GUESS_-gt_$SECRET "wikilink")\
-      then
-          tput setaf 1    # Red text
-          echo "Too high!"
-      elif `[`$GUESS -lt $SECRET`]($GUESS_-lt_$SECRET "wikilink")\
-      then
-          tput setaf 1    # Red text
-          echo "Too low!"
-      else
-          tput setaf 10   # Green text
-          echo "You got it in $((TRIES)) tries!"
-          ((WINS++))
-      fi
-      echo
-  done
-  if `[`! $GUESS -eq $SECRET`](!_$GUESS_-eq_$SECRET "wikilink")\
-  then
-      tput setaf 11   # Yellow text
-      echo "You lose after $TRIES attempts. The number was $SECRET. "
-  fi
+  # This next loop continues until the user guess correctly
+  # or the maximum number of guesses is exhausted
+  until `[`| $TRIES -ge $MAX_TRIES `]($GUESS_-eq_$SECRET "wikilink")\
+  do
+      tput setaf 15   # White text
+      read -p "Enter your guess (#$((++TRIES))): " GUESS
+      if `[`$GUESS -gt $SECRET`]($GUESS_-gt_$SECRET "wikilink")\
+      then
+          tput setaf 1    # Red text
+          echo "Too high!"
+      elif `[`$GUESS -lt $SECRET`]($GUESS_-lt_$SECRET "wikilink")\
+      then
+          tput setaf 1    # Red text
+          echo "Too low!"
+      else
+          tput setaf 10   # Green text
+          echo "You got it in $((TRIES)) tries!"
+          ((WINS++))
+      fi
+      echo
+  done
+  if `[`! $GUESS -eq $SECRET`](!_$GUESS_-eq_$SECRET "wikilink")\
+  then
+      tput setaf 11   # Yellow text
+      echo "You lose after $TRIES attempts. The number was $SECRET. "
+  fi
 
-  tput setaf 15   # White text
-  echo 
-  read -p "Do you want to play again (Y/N)? " PLAY
-  echo
+  tput setaf 15   # White text
+  echo 
+  read -p "Do you want to play again (Y/N)? " PLAY
+  echo
 
 done
-tput setaf 5  # Purple text
+tput setaf 5  # Purple text
 
-# In the next line, the multiplication
-# must preceed the division because
-# this is integer math
-echo "You executed $GAMES missions and succeeded $WINS times ($((WINS*100/GAMES))% success)."
+# In the next line, the multiplication
+# must preceed the division because
+# this is integer math
+echo "You executed $GAMES missions and succeeded $WINS times ($((WINS*100/GAMES))% success)."
 
 echo
-tput sgr0 # Reset to normal text
+tput sgr0 # Reset to normal text
 ~~~

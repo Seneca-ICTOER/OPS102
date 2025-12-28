@@ -2,10 +2,10 @@
 
 A CLI is provided by two programs:
 
-1.  A terminal program, which is responsible for collecting user input 
-and displaying the output from the shell and commands.
+1.  A terminal program, which is responsible for collecting user input 
+and displaying the output from the shell and commands.
 
-2.  A shell, which interprets the user's written commands.
+2.  A shell, which interprets the user's written commands.
 
 These may be on the same machine, or they may be on different computers.
 For example, it is common to access both Linux and Windows systems over

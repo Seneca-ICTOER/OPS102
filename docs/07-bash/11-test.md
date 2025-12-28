@@ -7,15 +7,15 @@ equality, and returns a status code of 0 if the test succeeds or non-0
 if it fails:
 
 ~~~bash
-test "$NAME" == "Chris"
+test "$NAME" == "Chris"
 ~~~
 
 This is used with the *if* statement like this:
 
 ~~~bash
-if test "$NAME" == "Chris"
+if test "$NAME" == "Chris"
 then
-  SUPERPOWERS="Yes"
+  SUPERPOWERS="Yes"
 fi
 ~~~
 
@@ -23,9 +23,9 @@ However, this syntax is a bit ugly! So bash provides a synonym for
 `test` which is `[[  ]]`:
 
 ~~~bash
-if [[ "$NAME" == "Chris" ]]
+if [[ "$NAME" == "Chris" ]]
 then
-  SUPERPOWERS="Yes"
+  SUPERPOWERS="Yes"
 fi
 ~~~
 
@@ -46,9 +46,9 @@ These tests check a filename to see if it is a regular file, a
 directory, or a symbolic link:
 
 ~~~bash
-[[ -f filename ]]   # True if filename is a regular file
-[[ -d filename ]]   # True if filename is a directory
-[[ -L filename ]]   # True if filename is a symbolic link
+[[ -f filename ]]   # True if filename is a regular file
+[[ -d filename ]]   # True if filename is a directory
+[[ -L filename ]]   # True if filename is a symbolic link
 ~~~
 
 Notes:
@@ -62,9 +62,9 @@ Notes:
 These tests check a filename to see if the person running the script can read, write, or execute the file (or access the directory):
 
 ~~~bash
-[[ -r filename ]]   # True if filename is readable
-[[ -w filename ]]   # True if filename is writable
-[[ -x filename ]]   # True if filename is executable
+[[ -r filename ]]   # True if filename is readable
+[[ -w filename ]]   # True if filename is writable
+[[ -x filename ]]   # True if filename is executable
 ~~~
 
 ## Tests Group 3: Strings 
@@ -72,10 +72,10 @@ These tests check a filename to see if the person running the script can read, w
 These tests accept two string arguments, which are compared:
 
 ~~~bash
-[[ string1 == string2 ]]   # True if the strings are equal
-[[ string1 != string2 ]]   # True if the strings are not equal
-[[ string1 > string2 ]]    # True if string1 sorts after string2 lexicographically
-[[ string1 < string2 ]]    # True if string1 sorts before string2 lexicographically
+[[ string1 == string2 ]]   # True if the strings are equal
+[[ string1 != string2 ]]   # True if the strings are not equal
+[[ string1 > string2 ]]    # True if string1 sorts after string2 lexicographically
+[[ string1 < string2 ]]    # True if string1 sorts before string2 lexicographically
 ~~~
 
 A note on the term *lexicographically*: Sorting *lexicographically* means sorting according to character code. This is like sorting alphabetically, but it applies to non-alphabetic characters as well, such as digits and punctuation marks. See the manpage for "ascii" to see the        sequence of the first 128 character codes (or refer to a Unicode        table for all of the character codes).
@@ -110,12 +110,12 @@ Note that this is different from numeric order, where 2 would preceed
 These tests accept to integer arguments, which are compared:
 
 ~~~bash
-[[ integer1 -eq integer2 ]]  # Integers are equal
-[[ integer1 -ne integer2 ]]  # Integers are not equal
-[[ integer1 -gt integer2 ]]  # Integer1 is greater than integer2
-[[ integer1 -ge integer2 ]]  # Integer1 is greater than or equal to integer2
-[[ integer1 -lt integer2 ]]  # Integer1 is less than integer2
-[[ integer1 -le integer2 ]]  # Integer1 is less than or equal to integer2
+[[ integer1 -eq integer2 ]]  # Integers are equal
+[[ integer1 -ne integer2 ]]  # Integers are not equal
+[[ integer1 -gt integer2 ]]  # Integer1 is greater than integer2
+[[ integer1 -ge integer2 ]]  # Integer1 is greater than or equal to integer2
+[[ integer1 -lt integer2 ]]  # Integer1 is less than integer2
+[[ integer1 -le integer2 ]]  # Integer1 is less than or equal to integer2
 ~~~
 
 ## Other Tests 
@@ -131,33 +131,33 @@ interested in other tests: *man bash*
 The `!` operator can be used to negate a test:
 
 ~~~bash
-[[ ! -f "$FILE" ]]   # True if "$FILE" is not a file (doesn't exist, or is a directory)
+[[ ! -f "$FILE" ]]   # True if "$FILE" is not a file (doesn't exist, or is a directory)
 ~~~
 
 The AND operator `&&` combines tests, with the result being True if the
 tests on the left and right are both true:
 
 ~~~bash
-[[ $A -lt $B && $B -lt $C ]]  # True if A is less than B, and also B is less than C.
+[[ $A -lt $B && $B -lt $C ]]  # True if A is less than B, and also B is less than C.
 ~~~
 
 The OR operator `||` combines tests, with the result being True if
 either of the tests are true:
 
 ~~~bash
-[[ $A -lt 0 ]]  # True if either: A is greater than B, or if A is less than 0.
+[[ $A -lt 0 ]]  # True if either: A is greater than B, or if A is less than 0.
 ~~~
 
 You can use multiple `!`, `&&`, and `||` operators toegether:
 
 ~~~bash
-[[ -f "$FILE" && -r "$FILE" && -w "$FILE" ]] # True if "$FILE" is a readable, writable regular file.
+[[ -f "$FILE" && -r "$FILE" && -w "$FILE" ]] # True if "$FILE" is a readable, writable regular file.
 ~~~
 
 ## Tips on Using Tests 
 
-- Remember to quote any arguments which include whitespace, or which may be 
-null (empty).
-- Be careful with the `<` and `>` comparison operators: if you have 
-a syntax error, you may accidentally redirect data (which in the case of 
-`>` might overwrite a file!)
+- Remember to quote any arguments which include whitespace, or which may be 
+null (empty).
+- Be careful with the `<` and `>` comparison operators: if you have 
+a syntax error, you may accidentally redirect data (which in the case of 
+`>` might overwrite a file!)
