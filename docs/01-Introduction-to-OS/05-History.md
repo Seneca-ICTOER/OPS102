@@ -56,7 +56,7 @@ to promote the concept of Free Software ("free" in the sense of free
 free of cost). The GNU project developed its own version of most of the Unix 
 tools and utilities, and in many cases the GNU versions of the software were 
 better than the versions distributed with Unix. However, the GNU project did 
-not create a kernel for a long gime, so the GNU software was usually used in conjunction with 
+not create a kernel for a long time, so the GNU software was usually used in conjunction with 
 a commercial Unix system.
 
 -  1984 - The X Window System is first developed at MIT to provide a 
