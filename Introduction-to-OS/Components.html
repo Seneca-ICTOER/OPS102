@@ -14,8 +14,8 @@
 <meta name="msapplication-TileColor" content="#DA291C">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/OPS102/assets/css/styles.966c191a.css">
-<script src="/OPS102/assets/js/runtime~main.f5da2fa7.js" defer="defer"></script>
-<script src="/OPS102/assets/js/main.d17be486.js" defer="defer"></script>
+<script src="/OPS102/assets/js/runtime~main.fca42591.js" defer="defer"></script>
+<script src="/OPS102/assets/js/main.f253b397.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -25,32 +25,12 @@
 <p>Most modern operating systems are delivered as five separate and
 inter-related parts:</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-kernel">The Kernel<a href="#the-kernel" class="hash-link" aria-label="Direct link to The Kernel" title="Direct link to The Kernel">​</a></h2>
-<p>This is the heart of the operating system, the main program (or group of
-programs) that controls the computer. The kernel operates in a special
-privileged mode, which allows it to manage the resources and security
-settings for all other software. The kernel is loaded by the computer&#x27;s
-firmware (built-in software) and sets up the computer&#x27;s hardware and
-resources before starting the services and user interface(s) in
-non-privileged mode, controlling the computer&#x27;s hardware to enforce the
-privilege level.</p>
+<p>This is the heart of the operating system, the main program (or group of programs) that controls the computer. The kernel operates in a special privileged mode (such as &quot;Ring 0&quot; on Intel/AMD x86 processors, or &quot;Exception Level 3&quot; on ARM processors), which allows it to manage the resources and security settings for all other software. The kernel is loaded by the computer&#x27;s firmware (built-in software) and sets up the computer&#x27;s hardware and resources before starting the services and user interface(s) in non-privileged mode, controlling the computer&#x27;s hardware to enforce the privilege level.</p>
+<p>(You will occasionally see alternate spellings of <em>kernel</em>, such as &quot;kernal&quot;, in some operating systems - especially older ones. ).</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="system-libraries">System Libraries<a href="#system-libraries" class="hash-link" aria-label="Direct link to System Libraries" title="Direct link to System Libraries">​</a></h2>
-<p>Many programs need to perform the same operations, such as accessing the
-network, playing sound, or drawing something on the screen. Libraries
-provide a common set of software routines (also known as functions,
-methods, procedures, or subroutines) which programs access to perform
-these common operations. This eliminates the need for each program to
-contain duplicate code for these common operations, which reduces
-software duplication and program size. Although additional libraries may
-be installed on the computer, the system libraries provided as part of
-the operating system provide the most broadly-used routines required by
-nearly every program.</p>
+<p>Many programs need to perform the same operations, such as accessing the network, playing sound, or drawing something on the screen. Libraries provide a common set of software procedures (also known as functions, methods, routines, or subroutines) which programs access to perform these common operations. This eliminates the need for each program to contain duplicate code for these common operations, which reduces software duplication and program size. Although additional libraries may be installed on the computer, the system libraries provided as part of the operating system provide the most broadly-used procedures required by nearly every program.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="services">Services<a href="#services" class="hash-link" aria-label="Direct link to Services" title="Direct link to Services">​</a></h2>
-<p>These are programs that run continuously in the background, providing
-services such as WiFi authentication, print management, and file
-sharing. Unlike the kernel, these programs don&#x27;t operate with full
-system privilege, and are therefore subject to the same type of resource
-and security management as regular programs, and they also utilize the
-system libraries.</p>
+<p>These are programs that run continuously in the background, providing services such as WiFi authentication, print management, and file sharing. Unlike the kernel, these programs don&#x27;t operate with full system privilege, and are therefore subject to the same type of resource and security management as regular programs, and they also utilize the system libraries.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-user-interfaces">The User Interface(s)<a href="#the-user-interfaces" class="hash-link" aria-label="Direct link to The User Interface(s)" title="Direct link to The User Interface(s)">​</a></h2>
 <p>This is the software that enables the user to interact with the system.
 Most operating systems provide at least two user interfaces:</p>
