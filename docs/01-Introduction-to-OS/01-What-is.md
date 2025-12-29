@@ -9,8 +9,8 @@ computers and microcomputers, as well as very simple embedded computers,
 do not require an operating system. The computer embedded into a simple
 mass-market microwave oven, for example, only ever runs one program,
 does not have communications capabilities, does not multitask, and is
-never updated, and therefore has no operating system.
+never updated, and therefore does not need an operating system.
 
-However, virtually all contemporary computer systems, including embedded
+However, virtually all contemporary computer systems, including most online embedded
 devices, are sufficiently complex that they are equipped with an
 operating system.

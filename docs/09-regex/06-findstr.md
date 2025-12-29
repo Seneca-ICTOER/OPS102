@@ -1,4 +1,4 @@
-`# Windows findstr and Regular Expressions 
+# Windows findstr and Regular Expressions 
 
 The Windows `findstr` command accepts regular expressions or literal
 expressions. It will guess what you're using, and may guess
@@ -16,5 +16,10 @@ equivalent to `grep -E "red|blue" INPUTFILE`
 
 Findstr is also limited to (approximately) 127 characters in the regular expression.
 
-For information on findstr's regular expression dialect, see `help findstr`. In particular, the findstr command does not support alternation with the `|` symbol, repetition other than with the `*`
-symbol, named character classes `[[:*name*:]]`, or grouping `( )`.
+For information on findstr's regular expression dialect, see `help findstr`. In particular, the findstr command does not support:
+
+- alternation with the `|` symbol
+- repetition other than with the `*` symbol
+- named character classes `[[:*name*:]]`
+- grouping `( )`
+- 
