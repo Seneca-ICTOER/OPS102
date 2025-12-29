@@ -39,6 +39,9 @@ e.g., `[[[:digit:]]+-.,]`  `[[:digit:][:punct:]]`  `[0-9_*]`
 - To invert a character class, add a carat `^` character as the first character after the opening square bracket: `[^[:digit:]]` matches any non-digit  character, and `[^:]` matches any character that is not a colon.
 - To include a literal carat, place it at the end of the character class.
 - To include a literal dash or closing square bracket, place it at the start of the character class.
+- Two important caveat to consider:
+    - Named character classes will match symbols from any alphabet. For example, `[[:alpha:]]` will match alphabetic characters from any language, and `[[:digit:]]` will match *any* digit symbols, including symbols such as `۱۲۳۴۵۶۷۸۹߀߁߂߃߄߅߆߇߈߉०१२३४५६७८९٠`
+    - The "collation sequence" of characters determines the order of characters for sorting and comparision purposes. This may affect what is included in ranges used within bracket expressions. For example, in some collation sequences, capital letters may be interspersed between lowercase letters (`aAbBcCdD...zZ`), so the bracket expression `[a-z]` will include all of the uppercase letters except for `Z`. On Linux systems, the `LC_COLLATE` environment variable controls the collation sequence (see the manpages for `locale(1)`, `locale(5)`, `locale(7)`, and `charmap(5)`). 
 
 ## 4. Repetition
 
