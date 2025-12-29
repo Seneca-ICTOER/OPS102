@@ -1,18 +1,18 @@
 # The Seven Basic Elements of Regular Expressions 
 
-## Characters
+## 1. Characters
 
 In a regular expression (regexp), any character that doesn\'t otherwise have a special meaning matches that character. So the digit `5`, for example, matches the digit `5`; similarly `cat` matches the letters `c`, `a`, and `t` in sequence.
 
 A backslash can be used to remove any special meaning which a character has. The period character `.` is a type of wildcard (see below), so to search for a literal period, we place a backslash in front of it: `\.`
 
-## Wildcards
+## 2. Wildcards
 
 A period `.` will match any single character. Similarly, three periods `...` will match any three characters.
 
 You can combine characters and wildcards: the regex `a.e` will match the letter `a` followed by any one character followed by the letter `e`. Therefore, it will match `age` but not `app` or `angle`.
 
-## Bracket Expressions / Character Classes 
+## 3. Bracket Expressions / Character Classes 
 
 Bracket Expressions or Character Classes are contained in square brackets `[ ]`
 
@@ -40,7 +40,7 @@ e.g., `[[[:digit:]]+-.,]`  `[[:digit:][:punct:]]`  `[0-9_*]`
 - To include a literal carat, place it at the end of the character class.
 - To include a literal dash or closing square bracket, place it at the start of the character class.
 
-## Repetition
+## 4. Repetition
 
 - A repeat count can be placed in curly brackets. It applies to the previous element:  `x{3}` matches `xxx`
 - A repeat can be a range, written as *min,max* in curly brackets: `x{2,5}` will match `xx`, `xxx`, `xxxx`, or `xxxxx`
@@ -50,17 +50,17 @@ e.g., `[[[:digit:]]+-.,]`  `[[:digit:][:punct:]]`  `[0-9_*]`
   - `+` is the same as `{1,}` (one or more)
   - `?` is the same as `{0,1}` (zero or one)
 
-## Alternation
+## 5. Alternation
 
 - The vertical bar indicates alternation &mdash; either the expression on the left or the right can be matched: `hot|cold` will match `hot` or `cold`
 
-## Grouping
+## 6. Grouping
 
 - Elements placed in parenthesis are treated as a group, and can be repeated:
 `(na)* batman` will match `nananana batman` and `nananananananana batman`
 - Grouping may also be used to limit alternation: `(fire|green)house` will match `firehouse` or `greenhouse`
 
-## Anchors
+## 7. Anchors
 
 - Anchors match *locations*, not characters.
 - A carat symbol will match the start of a line: `^[[:upper:]]` will match lines that start with an uppercase letter.
