@@ -14,8 +14,8 @@
 <meta name="msapplication-TileColor" content="#DA291C">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/OPS102/assets/css/styles.966c191a.css">
-<script src="/OPS102/assets/js/runtime~main.70f8f630.js" defer="defer"></script>
-<script src="/OPS102/assets/js/main.a596cf5f.js" defer="defer"></script>
+<script src="/OPS102/assets/js/runtime~main.93c3ee01.js" defer="defer"></script>
+<script src="/OPS102/assets/js/main.84923f79.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -57,7 +57,7 @@ form feed)</li>
 </li>
 <li>
 <p>Ranges, lists, and named character classes may be combined -
-e.g., <code>[[[:digit:]]+-.,]</code> <code>[[:digit:]][:punct:]]</code> <code>[0-9_*]</code></p>
+e.g., <code>[[[:digit:]]+-.,]</code>  <code>[[:digit:][:punct:]]</code>  <code>[0-9_*]</code></p>
 </li>
 <li>
 <p>To invert a character class, add a carat <code>^</code> character as the first character after the opening square bracket: <code>[^[:digit:]]</code> matches any non-digit  character, and <code>[^:]</code> matches any character that is not a colon.</p>
@@ -71,8 +71,7 @@ e.g., <code>[[[:digit:]]+-.,]</code> <code>[[:digit:]][:punct:]]</code> <code>[0
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="repetition">Repetition<a href="#repetition" class="hash-link" aria-label="Direct link to Repetition" title="Direct link to Repetition">​</a></h2>
 <ul>
-<li>A repeat count can be placed in curly brackets. It applies to the previous
-element:  <code>x{3}</code> matches <code>xxx</code></li>
+<li>A repeat count can be placed in curly brackets. It applies to the previous element:  <code>x{3}</code> matches <code>xxx</code></li>
 <li>A repeat can be a range, written as <em>min,max</em> in curly brackets: <code>x{2,5}</code> will match <code>xx</code>, <code>xxx</code>, <code>xxxx</code>, or <code>xxxxx</code></li>
 <li>The maximum value in a range can be omitted: <code>x{2,}</code> will match two or more <code>x</code> characters in a row</li>
 <li>There are short forms for some commonly-used ranges:<!-- -->
@@ -95,7 +94,7 @@ element:  <code>x{3}</code> matches <code>xxx</code></li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="anchors">Anchors<a href="#anchors" class="hash-link" aria-label="Direct link to Anchors" title="Direct link to Anchors">​</a></h2>
 <ul>
-<li>Anchors match <strong>locations</strong>, not characters.</li>
+<li>Anchors match <em>locations</em>, not characters.</li>
 <li>A carat symbol will match the start of a line: <code>^[[:upper:]]</code> will match lines that start with an uppercase letter.</li>
 <li>A dollar sign will match the end of a line: <code>[[:punct:]]$</code> will match
 lines that end with a punctuation mark.</li>
