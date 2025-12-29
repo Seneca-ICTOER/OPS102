@@ -35,15 +35,14 @@ form feed)
     - lower - lowercase letters
     - xdigit - hexidecimal digits (digits plus a-f and A-F)
 - Ranges, lists, and named character classes may be combined - 
-e.g., `[[[:digit:]]+-.,]` `[[:digit:]][:punct:]]` `[0-9_*]`
+e.g., `[[[:digit:]]+-.,]`  `[[:digit:][:punct:]]`  `[0-9_*]`
 - To invert a character class, add a carat `^` character as the first character after the opening square bracket: `[^[:digit:]]` matches any non-digit  character, and `[^:]` matches any character that is not a colon.
 - To include a literal carat, place it at the end of the character class.
 - To include a literal dash or closing square bracket, place it at the start of the character class.
 
 ## Repetition
 
-- A repeat count can be placed in curly brackets. It applies to the previous 
-element:  `x{3}` matches `xxx`
+- A repeat count can be placed in curly brackets. It applies to the previous element:  `x{3}` matches `xxx`
 - A repeat can be a range, written as *min,max* in curly brackets: `x{2,5}` will match `xx`, `xxx`, `xxxx`, or `xxxxx`
 - The maximum value in a range can be omitted: `x{2,}` will match two or more `x` characters in a row
 - There are short forms for some commonly-used ranges:
@@ -63,7 +62,7 @@ element:  `x{3}` matches `xxx`
 
 ## Anchors
 
-- Anchors match **locations**, not characters.
+- Anchors match *locations*, not characters.
 - A carat symbol will match the start of a line: `^[[:upper:]]` will match lines that start with an uppercase letter.
 - A dollar sign will match the end of a line: `[[:punct:]]$` will match
 lines that end with a punctuation mark.
