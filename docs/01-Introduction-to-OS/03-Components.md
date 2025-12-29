@@ -5,36 +5,17 @@ inter-related parts:
 
 ## The Kernel 
 
-This is the heart of the operating system, the main program (or group of
-programs) that controls the computer. The kernel operates in a special
-privileged mode, which allows it to manage the resources and security
-settings for all other software. The kernel is loaded by the computer's
-firmware (built-in software) and sets up the computer's hardware and
-resources before starting the services and user interface(s) in
-non-privileged mode, controlling the computer's hardware to enforce the
-privilege level.
+This is the heart of the operating system, the main program (or group of programs) that controls the computer. The kernel operates in a special privileged mode (such as "Ring 0" on Intel/AMD x86 processors, or "Exception Level 3" on ARM processors), which allows it to manage the resources and security settings for all other software. The kernel is loaded by the computer's firmware (built-in software) and sets up the computer's hardware and resources before starting the services and user interface(s) in non-privileged mode, controlling the computer's hardware to enforce the privilege level.
+
+(You will occasionally see alternate spellings of *kernel*, such as "kernal", in some operating systems - especially older ones. ).
 
 ## System Libraries 
 
-Many programs need to perform the same operations, such as accessing the
-network, playing sound, or drawing something on the screen. Libraries
-provide a common set of software routines (also known as functions,
-methods, procedures, or subroutines) which programs access to perform
-these common operations. This eliminates the need for each program to
-contain duplicate code for these common operations, which reduces
-software duplication and program size. Although additional libraries may
-be installed on the computer, the system libraries provided as part of
-the operating system provide the most broadly-used routines required by
-nearly every program.
+Many programs need to perform the same operations, such as accessing the network, playing sound, or drawing something on the screen. Libraries provide a common set of software procedures (also known as functions, methods, routines, or subroutines) which programs access to perform these common operations. This eliminates the need for each program to contain duplicate code for these common operations, which reduces software duplication and program size. Although additional libraries may be installed on the computer, the system libraries provided as part of the operating system provide the most broadly-used procedures required by nearly every program. 
 
 ## Services
 
-These are programs that run continuously in the background, providing
-services such as WiFi authentication, print management, and file
-sharing. Unlike the kernel, these programs don't operate with full
-system privilege, and are therefore subject to the same type of resource
-and security management as regular programs, and they also utilize the
-system libraries.
+These are programs that run continuously in the background, providing services such as WiFi authentication, print management, and file sharing. Unlike the kernel, these programs don't operate with full system privilege, and are therefore subject to the same type of resource and security management as regular programs, and they also utilize the system libraries.
 
 ## The User Interface(s) 
 

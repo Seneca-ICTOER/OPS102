@@ -1,6 +1,6 @@
 # A Brief History of Operating Systems 
 
-Many operating systems have been released. This is a timeline of some of
+Many operating systems have been released. This is a timeline of a few of
 the milestone events leading to some of the most prominent operating
 systems used today:
 
@@ -75,7 +75,7 @@ made a useful operating system (often referred to as "GNU/Linux" or just
 
 -  1992 - IBM and Microsoft ended their collaboration on OS/2, an advanced 
 operating system with a graphical user interface. IBM continued independent 
-development of OS/2.
+development of OS/2, and Microsoft incorporpated a number of OS/2 concepts into Windows.
 
 -  1993 - Microsoft introduced Windows/NT (for "New Technology"), 
 incorporating some concepts from OS/2. Unlike previous versions of Windows 
@@ -91,3 +91,10 @@ led by Google, released the Android operating system for mobile devices
 (Android was originally written as for cameras!). The Android platform is 
 based on the Linux kernel.
 
+## The Impact of Operating System History
+
+The impact of this *lineage* of operating systems is reflected in various conventions and design decisions present in the current versions of Linux and Windows.
+
+For example, you will find many Windows commands that are completely different from Unix commands, because they were adopted from CP/M (via QDOS via DOS). You will also find some Windows commands that are identical to Unix commands, because they were directly incorporated from Xenix, such as `mkdir` and `rmdir`.
+
+On the other hand, you'll find that Linux (and MacOS) commands are more closely related to Unix commands, because Linux and modern MacOS take their structure directly from Unix.
