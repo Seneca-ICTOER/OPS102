@@ -35,7 +35,7 @@ form feed)
     - lower - lowercase letters
     - xdigit - hexidecimal digits (digits plus a-f and A-F)
 - Ranges, lists, and named character classes may be combined - 
-e.g., `[[[:digit:]]+-.,]`  `[[:digit:][:punct:]]`  `[0-9_*]`
+e.g., `[[:digit:]+-.,]`  `[[:digit:][:punct:]]`  `[0-9_*]`
 - To invert a character class, add a carat `^` character as the first character after the opening square bracket: `[^[:digit:]]` matches any non-digit  character, and `[^:]` matches any character that is not a colon.
 - To include a literal carat, place it at the end of the character class.
 - To include a literal dash or closing square bracket, place it at the start of the character class.
