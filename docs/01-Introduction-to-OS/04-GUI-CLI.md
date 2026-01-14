@@ -38,12 +38,12 @@ the task of croping, resizing, and changing the format of photographs:
 
 ## GUIs and CLIs are Complimentary
 
-Since computer programs are text, programmers become accustomed to referring to resources using text descriptions. For example, a programmer may write line of C code to open a file like this:
+Since computer programs are text, programmers become accustomed to referring to resources using text descriptions. For example, a programmer may a write line of C code to open a file like this:
 
 ```C
-  open("/usr/local/share/words", O_RDONLY);
+  open("/usr/share/dict/words", O_RDONLY);
 ```
 
-If the programmer wanted to check on that file, perhaps to see the file size, they could use a either a GUI or a CLI tool. But since they've just been looking at text (the code they just wrote), it's often easiest to stay in the same mental mode and access the file using a CLI tool, rather than to switch to a different paradigm and use a GUI tool.
+If the programmer wanted to check on that file, perhaps to see the file size or make sure they got the name right, they could use a either a GUI or a CLI tool. But since they've just been looking at text (the code they just wrote), it's often easiest to stay in the same mental mode and access the file using a CLI tool, rather than to switch to a different paradigm and use a GUI tool.
 
-A programmer will often use both types of user interfaces in combination. For example, they may adjust a sound file using a GUI, then use a CLI to place the sound file into a particular folder or directory, mixing and matching GUI and CLI tools on-they-fly.
+A programmer will often use both types of user interfaces in combination. For example, they may adjust a sound file using a GUI tool, then use a CLI to place the sound file into a particular folder or directory, mixing and matching GUI and CLI tools on-they-fly.
