@@ -14,11 +14,7 @@ any system, anywhere, and edit a file!
 
 ### Linux Default Text Editor 
 
-On Linux systems, most distributions (the organizations or companies
-responsible for maintaining and distributing the system) have
-standardized on the *nano* editor as the default CLI/TUI text editor
-(replacing the less-user-friendly but more-powerful *vi* editor). To
-start nano, type *nano* and optionally provide a filename:
+On Linux systems, most distributions (the organizations or companies responsible for maintaining and distributing the system) have standardized on the *nano* editor as the default CLI/TUI text editor (replacing the less-user-friendly but more-powerful *vi* editor, which was previously the default). To start nano, type *nano* and optionally provide a filename:
 
 ~~~plain
 nano
@@ -26,7 +22,7 @@ nano file
 ~~~
 
 Nano provides a help display at the bottom of the screen. The carat ^
-symbol indicates the control key, so the help text \"\^X Exit\" means
+symbol indicates the control key, so the help text "^X Exit" means
 that you would press Ctrl-X to exit from the editor.
 
 Since Linux systems provide multiple desktop GUI environments, the
@@ -37,13 +33,9 @@ the KDE desktop, the default GUI text editor is a program called *Kate*.
 
 ### Windows Default Text Editor 
 
-The current versions of Windows (Windows 10 & 11) do not provide a
-CLI/TUI text editor (previous versions of Windows did provide a CLI text
-editor, and there is a current discussion about ading this back in).
-However, you can run the GUI Notepad editor, either from the Start Menu,
-or from the command line (as long as you are not accessing the Windows
-system remotely through a non-graphical connection), optionally providing
-a filename to be edited:
+Previous versions of Windows included a CLI/TUI text editor called *Edit*. This was removed a few years ago, and Windows technical users have been asking Microsoft to reinstate it ever since. The current beta (pre-release test versions) of Windows includes a new version of *Edit*, and it should reappear in the main Windows releases soon.
+
+In the interim, you can run the GUI Notepad editor, either from the Start Menu, or from the command line (as long as you are not accessing the Windows system remotely through a non-graphical connection), optionally providing a filename to be edited:
 
 ~~~plain
 notepad
@@ -61,8 +53,8 @@ There are also several categories of software that are (arguably) a type
 of text editor, including:
 
 1. Basic text editors
-1. Code editors, for editing software and configuration files, with features such as tooltip help, syntax highlighting, bracket matching, and automatic indentation
-1. Word processors, for editing documents, with features such as spell 
+2. Code editors, for editing software and configuration files, with features such as tooltip help, syntax highlighting, bracket matching, and automatic indentation
+3. Word processors, for editing documents, with features such as spell 
 checking, visual formatting, advanced layout features such as columns
 and tables
 

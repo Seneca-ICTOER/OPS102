@@ -1,6 +1,6 @@
 # Filename Patterns 
 
-Linux and Windows systems both allow ambiguous filenames, which use
+Linux and Windows systems both allow ambiguous filenames (or *filename patterns*), which use
 *wildcard* symbols to enable filename matching. The process of
 converting an ambiguous filename, or filename pattern, into a list of
 matching filenames is called *globbing* or *filename expansion*.
@@ -21,7 +21,7 @@ globbing.
 |:---  |:---            |:---              |
 |*|Matches zero or more characters|Matches zero or more characters|
 |?|Matches one character|Matches one character, unless at the end of the filename or immediately before the dot preceeding the extension  in which case it matches zero or one character|
-|<nowiki>[</nowiki>//list//<nowiki>]</nowiki> or <nowiki>[</nowiki>//range//<nowiki>]</nowiki>|Matches any one of the characters within the brackets (note that it matches exactly **one** of the characters)|//Not applicable//|
+|<nowiki>[</nowiki>list<nowiki>]</nowiki> or <nowiki>[</nowiki>range<nowiki>]</nowiki>|Matches any one of the characters within the brackets (note that it matches exactly **one** of the characters)|*Not applicable*|
 
 
 ## Examples
@@ -56,8 +56,8 @@ patterns. For example, in the command:
 ```plain
  del \Users\jdoe\Documents\*.txt
 ```
-the pattern \\Users\\jdoe\\Documents\\\*.txt* will match all files with
-a *txt* extension in the *\\Users\\jdoe\\Documents\\* directory, and the
+the pattern ``\\Users\\jdoe\\Documents\\\*.txt*`` will match all files with
+a *txt* extension in the ``\\Users\\jdoe\\Documents\\`` directory, and the
 *del* command will then attempt to delete all of the matching files.
 
 On Linux, you can also use patterns to match directory names:
@@ -66,5 +66,5 @@ On Linux, you can also use patterns to match directory names:
  rm /home/chris/ops102/*/info.pdf
 ```
 
-This will delete any files named *info.pdf* within any subdirectory of
-*/home/chris/ops102/*
+This will delete any files named ``info.pdf`` within any subdirectory of
+``/home/chris/ops102/``
