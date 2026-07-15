@@ -124,11 +124,12 @@ Here are a few bash scripting examples that include loops:
 
 ## tput Colour Codes 
 
-The *tput* command outputs terminal codes to stdout to perform actions
+The `tput` command outputs terminal codes to stdout to perform actions
 such as setting the text colour, clearing the screen, and so forth.
 
-The *tput setaf *n** and *tput setab *n** commands set the
-foreground and background text colours, respectively. To see the
+The `tput setaf N` and `tput setab N` commands set the
+foreground and background text colours, respectively. The `tput sgr0`
+command resets the terminal To see the
 available colours, this script can be used:
 
 ~~~bash
