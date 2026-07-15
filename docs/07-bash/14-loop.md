@@ -83,6 +83,15 @@ do
 done
 ~~~
 
+And this loop counts from 10 to 1:
+
+~~~bash
+for (( i=10; i>0; i-- ))
+do
+  echo $i
+done
+~~~
+
 ## while EXPR 
 
 This loop continues as long as the expression *EXPR* is true:
@@ -130,6 +139,31 @@ do
   echo "Colour $C"
 done
 tput sgr0   # Reset to "normal" text mode
+~~~
+
+Here is a more advanced version, which displays a chart of all of the
+foreground and background colours available:
+
+~~~bash
+#!/usr/bin/bash
+
+# B is the background colour
+for (( B=0; B<16; B++))
+do
+        tput setab $B
+        # F is the foreground colour
+        for ((F=15; F>=0; F--))
+        do
+                tput setaf $F
+
+                # The next line uses a command-line
+                # version of printf. It uses the same
+                # formatting strings as the C version.
+                printf " %02d/%02d" $F $B
+        done
+        tput sgr0
+        echo
+done
 ~~~
 
 ## Number-Guessing Game 
