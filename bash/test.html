@@ -14,8 +14,8 @@
 <meta name="msapplication-TileColor" content="#DA291C">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/OPS102/assets/css/styles.966c191a.css">
-<script src="/OPS102/assets/js/runtime~main.b1b2c4bb.js" defer="defer"></script>
-<script src="/OPS102/assets/js/main.81eb6579.js" defer="defer"></script>
+<script src="/OPS102/assets/js/runtime~main.99cba9e7.js" defer="defer"></script>
+<script src="/OPS102/assets/js/main.05cd1824.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -83,7 +83,7 @@ tests on the left and right are both true:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[[ $A -lt $B &amp;&amp; $B -lt $C ]]  # True if A is less than B, and also B is less than C.</span><br></span></code></pre></div></div>
 <p>The OR operator <code>||</code> combines tests, with the result being True if
 either of the tests are true:</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[[ $A -lt 0 ]]  # True if either: A is greater than B, or if A is less than 0.</span><br></span></code></pre></div></div>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[[ $A -gt $B || $A -lt 0 ]]  # True if either: A is greater than B, or if A is less than 0.</span><br></span></code></pre></div></div>
 <p>You can use multiple <code>!</code>, <code>&amp;&amp;</code>, and <code>||</code> operators toegether:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[[ -f &quot;$FILE&quot; &amp;&amp; -r &quot;$FILE&quot; &amp;&amp; -w &quot;$FILE&quot; ]] # True if &quot;$FILE&quot; is a readable, writable regular file.</span><br></span></code></pre></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="tips-on-using-tests">Tips on Using Tests<a href="#tips-on-using-tests" class="hash-link" aria-label="Direct link to Tips on Using Tests" title="Direct link to Tips on Using Tests">​</a></h2>
