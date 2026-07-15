@@ -13,7 +13,8 @@ varieties:
 
 The GNU project originally shipped all three commands, but fgrep and
 egrep were never fully standardized, so they were removed from the Posix
-standard in 2001. They were recently also removed from the GNU project.
+standard in 2001. They were also removed from the GNU grep project, but
+due to the ensuing uproar, they have been reinstated!
 
 Unlike the original Unix grep, the GNU grep can handle the full extended
 regular expression syntax, in either of two ways:
@@ -23,7 +24,7 @@ preceed them with a backslash. In other words, while a backslash makes
 special characters like . or ordinary, it also makes ordinary 
 characters into special characters.
 
-- Alternately, use the `-E` option to make grep understand extended 
+- Alternately, use `egrep` or the `-E` option to make grep understand extended 
 regular expressions, which causes metacharacters to become special characters.
 
 Other tools, such as sed, similarly require backslashes in front of some
