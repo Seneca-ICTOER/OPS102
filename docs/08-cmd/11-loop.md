@@ -15,22 +15,22 @@ percent signs [%%] inside a script
 When the body of a *FOR* loop is executed, the variables are expanded
 (replaced by their values) before the loop begins. That means that any
 variables that are contained in the loop have their values locked-in and
-they can\'t be changed while the loop is executing.​
+they can\'t be changed while the loop is executing.
 
-To allow updated variable values to be accessed within a loop:​
+To allow updated variable values to be accessed within a loop:
 
-1\. Set the EnableDelayedExpansion option:​
+1\. Set the EnableDelayedExpansion option:
 
 ~~~cmd
-SETLOCAL EnableDelayedExpansion​
+SETLOCAL EnableDelayedExpansion
 ~~~
 
-​2\. Change any variables which will be updated during the execution of
+2\. Change any variables which will be updated during the execution of
 the loop by replacing the percent-signs ( `%` ) with exclaimation-marks (
-`!` ):​
+`!` ):
 
 ~~~cmd
-%ERRORLEVEL%    ->    !ERRORLEVEL!​
+%ERRORLEVEL%    ->    !ERRORLEVEL!
 ~~~
 
 ## Loop throush a List of Files or Parameters 
@@ -38,7 +38,7 @@ the loop by replacing the percent-signs ( `%` ) with exclaimation-marks (
 To loop through a list of values such as filenames, use:
 
 ~~~cmd
-FOR %variable IN (files) DO list​
+FOR %variable IN (files) DO list
 ~~~
 
 The *variable* will be sequentially set to each of the given *files*
@@ -62,20 +62,20 @@ FOR /D %variable IN (files) DO list
 ### Example
 
 ~~~cmd
-@echo off​
-SETLOCAL EnableDelayedExpansion​
-FOR %%F IN (\*) DO (​
+@echo off
+SETLOCAL EnableDelayedExpansion
+FOR %%F IN (\*) DO (
 
 rem The CHOICE command presents a Y/N choice and sets %ERRORLEVEL%
 rem to 1 if the user selected Y and 2 if the user selected N
 
-CHOICE /M "DELETE %%F"​
-IF !ERRORLEVEL!==1 (​
-  ECHO ...Deleting %%F​
-  DEL %%F​
-) ELSE (​
-  ECHO ...Skipping %%F​
-)​
+CHOICE /M "DELETE %%F"
+IF !ERRORLEVEL!==1 (
+  ECHO ...Deleting %%F
+  DEL %%F
+) ELSE (
+  ECHO ...Skipping %%F
+)
 ~~~
 
 ## Loop through a Range of Integers 
@@ -87,14 +87,14 @@ FOR /L (start, step, end) DO list
 This type of loop counts forward or backwards from *start* to *end* by
 a given *step*.
 
-Example:​ ​
+Example:
 
 ~~~cmd
-@echo off​
-rem Count from 0 to 5 in increments of 1​
-FOR /L %%I IN (0,  1, 5) DO ECHO ... %%I ...​
+@echo off
+rem Count from 0 to 5 in increments of 1
+FOR /L %%I IN (0,  1, 5) DO ECHO ... %%I ...
  
-rem Count from 4 to 0 in increments of -1​
+rem Count from 4 to 0 in increments of -1
 FOR /L %%I IN (4, -1, 0) DO ECHO ... %%I ...
 ~~~
 

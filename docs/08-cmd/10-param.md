@@ -7,36 +7,36 @@ parameters using the special variables *%0*, *%1*, *%2*, and so forth.
 second percent sign after the parameter number!)
 
 The shift command gets rid of the first parameter and shifts every
-parameter to a lower number.​
+parameter to a lower number.
 
 Examples:
 
 ~~~script
-> type params.cmd​
-@echo off​
-ECHO PARAM 0: %0​
-ECHO PARAM 1: %1​
-ECHO PARAM 2: %2​
+> type params.cmd
+@echo off
+ECHO PARAM 0: %0
+ECHO PARAM 1: %1
+ECHO PARAM 2: %2
 
-> params red green blue​
-PARAM 0: params​
-PARAM 1: red​
-PARAM 2: green​
+> params red green blue
+PARAM 0: params
+PARAM 1: red
+PARAM 2: green
 
-> type params-shift.cmd​
-@echo off​
-ECHO List of all arguments: %*​
-:start​
-IF "%1"=="" GOTO :done​
-ECHO %1​
-SHIFT​
-GOTO :start​
-:done​
+> type params-shift.cmd
+@echo off
+ECHO List of all arguments: %*
+:start
+IF "%1"=="" GOTO :done
+ECHO %1
+SHIFT
+GOTO :start
+:done
 
-> params-shift yellow orange red​
-List of all arguments: yellow orange red​
-yellow​
-orange​
+> params-shift yellow orange red
+List of all arguments: yellow orange red
+yellow
+orange
 red
 ~~~
 

@@ -16,13 +16,13 @@ J. Doe
 Here is a script which uses a couple of *SET /P* statements:
 
 ~~~cmd
-@echo off​
-set /p NAME=Please enter your name:​
-echo Please to meet you, %NAME%​
-set /p FILE=Please enter a filename:​
-echo Saving your name into the file...​
-echo NAME=%NAME% >> %FILE%​
-echo Done.​
+@echo off
+set /p NAME=Please enter your name:
+echo Please to meet you, %NAME%
+set /p FILE=Please enter a filename:
+echo Saving your name into the file...
+echo NAME=%NAME% >> %FILE%
+echo Done.
 ~~~
 
 ## Command Capture 

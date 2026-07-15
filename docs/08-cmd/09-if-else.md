@@ -3,15 +3,15 @@
 The *IF* command takes a test, and uses the result of the test to
 control the execution of one or more commands. An *ELSE* clause is
 optional; if included, the first conditional commands should be placed
-in parenthesis.​
+in parenthesis.
 
 ~~~cmd
-> set A=Blue                                       ​
-> set B=Orange​
-> set C=Blue​
-​> if %A%==%C% echo Strings A and C match​
-Strings A and C match​
-> if %A%==%B% (echo Same!) else echo Different!​
+> set A=Blue 
+> set B=Orange
+> set C=Blue
+> if %A%==%C% echo Strings A and C match
+Strings A and C match
+> if %A%==%B% (echo Same!) else echo Different!
 Different!
 ~~~
 
@@ -40,15 +40,15 @@ string1 == string2
 
 These tests accept two string arguments, both strings or both integers,
 which are compared. Adding the /i switch will make string comparisons
-case-insensitive (UPPER/lowercase).​
+case-insensitive (UPPER/lowercase).
 
 ~~~cmd
-value1 EQU value2    True if the values are equal​
-value1 NEQ value2    True if the values are not equal​
-value1 LSS value2    True if the value1 less than value2 ​
-value1 LEQ value2    True if the value1 less/equal to value2​
-value1 GTR value2    True if the value1 greater than value2​
-value1 GEQ value2    True if the value1 greater than or equal to to value2​
+value1 EQU value2    True if the values are equal
+value1 NEQ value2    True if the values are not equal
+value1 LSS value2    True if the value1 less than value2 
+value1 LEQ value2    True if the value1 less/equal to value2
+value1 GTR value2    True if the value1 greater than value2
+value1 GEQ value2    True if the value1 greater than or equal to to value2
 ~~~
 
 To force a string comparison, enclose `value1` and `value2` in quotes.
@@ -58,20 +58,20 @@ as strings.
 
 ## Tests Group 4: Variable Definition, Errorlevel 
 
-Test to see if a variable is defined​: ​
+Test to see if a variable is defined: 
 
 ~~~cmd
-DEFINED variable    True if variable is defined​
+DEFINED variable    True if variable is defined
 ~~~
 
-Test to see if the ERRORLEVEL is above a threshold​:
+Test to see if the ERRORLEVEL is above a threshold:
 
 ~~~cmd
-ERRORLEVEL value    True if ERORRLEVEL>=value​
+ERRORLEVEL value    True if ERORRLEVEL>=value
 ~~~
 
 Although it\'s probably better to just an integer comparison such as:
-`%ERRORLEVEL% GEQ value​`
+`%ERRORLEVEL% GEQ value`
 
 ## Notes about IF and these Tests 
 
@@ -79,13 +79,13 @@ Although it\'s probably better to just an integer comparison such as:
 - The IF command can be used with `GOTO` and a label:
 
 ~~~cmd
-IF test GOTO :skip​
-...​
-:skip​
+IF test GOTO :skip
+...
+:skip
 ~~~
 
 Note that using a GOTO in a loop will make the shell forget about the
-loop, regardless of where the label is located!​
+loop, regardless of where the label is located!
 
 ## Negating and Combining Tests 
 

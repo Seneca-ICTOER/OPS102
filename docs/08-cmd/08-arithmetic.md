@@ -25,5 +25,5 @@ The answer is 2424
 Notes:
 
 - You can perform more than one arithmetic evaluation and assignment in one SET command by separating the expressions with a comma [,]
-- Some characters used in arithmetic expressions, such as the carat symbol, may need to be quoted or escaped to function correctly.​
-- Percent signs, when used in arithmetic expressions (as the modulo operator), need to be doubled [%%] to avoid confusion with the percent signs placed around variable names​
+- Some characters used in arithmetic expressions, such as the carat symbol, may need to be quoted or escaped to function correctly.
+- Percent signs, when used in arithmetic expressions (as the modulo operator), need to be doubled [%%] to avoid confusion with the percent signs placed around variable names.

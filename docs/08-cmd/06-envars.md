@@ -1,14 +1,14 @@
 # Environment Variables 
 
 By default, all variables are environment variables, inherited by child
-processes.​​
+processes.
 
 Environment variables are commonly used to pass configuration
-information to programs and to configure how programs operate.​
+information to programs and to configure how programs operate.
 
 You can view all of the current variables with the *set* command;
-you\'ll probably want to pipe the output through *more*. ​ Environment
-variables are used by all processes, not just the shell!​
+you\'ll probably want to pipe the output through *more*.  Environment
+variables are used by all processes, not just the shell!
 
 ## Common Environment Variables 
 

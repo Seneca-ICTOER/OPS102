@@ -43,16 +43,16 @@ Quoting in the Windows shell is very different from Bash!
 
 Using single or double quotes causes the quotes themselves to be
 included as part of the string or argument in most cases, but not when
-dealing with a filename:​
+dealing with a filename:
 
 ~~~cmd
-> ECHO "Hello"​
-"Hello"​
+> ECHO "Hello"
+"Hello"
 
-> ECHO test > "test file"​
+> ECHO test > "test file"
 ~~~
 
-​Quoting is not required when assigning a string value which contains
+Quoting is not required when assigning a string value which contains
 spaces to a variable:
 
 ~~~cmd
@@ -64,7 +64,7 @@ One Two Three
 ## Carat Symbols 
 
 Escaping characters to remove their special meaning is performed using
-the carat \[\^\] symbol in Windows.​ In this example, the ampersand \[&\]
+the carat \[\^\] symbol in Windows. In this example, the ampersand \[&\]
 symbol would normally cause an error, but it can be treated as a regular
 character by escaping it with a carat:
 
@@ -76,9 +76,9 @@ Lost & Found
 
 When piping, a CMD subshell is started for each command in the pipeline,
 and it is necessary to use triple carat symbols \^\^\^ to escape
-characters:​
+characters:
 
 ~~~cmd
-> echo Lost ^^^& Found | find "Lost" ​
-Lost & Found ​
+> echo Lost ^^^& Found | find "Lost" 
+Lost & Found 
 ~~~
