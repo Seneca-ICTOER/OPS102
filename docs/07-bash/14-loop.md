@@ -9,7 +9,8 @@ There are four types of loops in bash:
 
 
 In every case, the actual body of the loop is contained within *do* \...
-*done* keywords.
+*done* keywords. If you're used to programming in C, you can think of 
+the *do* as equivalent to `{` and the *done* as equivalent to `}`.
 
 ## for VARIABLE in LIST 
 
@@ -53,17 +54,23 @@ done
 
 One thing to remember with this last form of the loop is that *if the pattern does not match any file* then the pattern itself will be assigned to the variable. For example, in the example above, if there are no files that match the pattern `*.c` then the variable SOURCEFILE will be set to the actual pattern: `SOURCEFILE=*.c`
 
-This can be used in various ways. For example, this loop will compile all of the C source files found in the current directory:
+This type of loop can be used in various ways. For example, this loop will compile all of the C source files found in the current directory:
 
 ~~~bash
 for SOURCEFILE in *.c
 do
-  echo "=== Compiling $SOURCEFILE ==="
+  # The 'if' below guards against the possibility
+  # that there are no .c files found in the current
+  # directory.
+  if [[ -f "$SOURCEFILE" ]]
+  then
+    echo "=== Compiling $SOURCEFILE ==="
   
-  # This next line removes the extension from the filename
-  BINARY="$(echo $SOURCEFILE | cut -d. -f1)"
+    # This next line removes the extension from the filename
+    BINARY="$(echo $SOURCEFILE | cut -d. -f1)"
   
-  gcc SOURCEFILE -o $BINARY
+    gcc SOURCEFILE -o $BINARY
+  fi
 done
 ~~~
 
@@ -71,7 +78,7 @@ done
 
 ## The "C-style" for loop: for (( ; ; )) 
 
-This loop is very similar to the \"for\" loop available in the C language. The C parenthesis are changed to bash double-parenthesis, to invoke the bash arithmetic syntax, and the curly-braces `{ }` used in C are replaced by the bash *do* and *done* keywords. The three arguments in the double-parenthesis are the initial condition (variable
+This loop is very similar to the `for` loop available in the C language. The C parenthesis are changed to bash double-parenthesis, to invoke the bash arithmetic syntax, and the curly-braces `{ }` used in C are replaced by the bash *do* and *done* keywords. The three arguments in the double-parenthesis are the initial condition (variable
 initialization), the control condition (an expression that, while true, causes the loop to continue), and the increment/decrement (an expression which is executed at the end of each loop, which typically increments or decrements a counter).
 
 For example, this loop counts from 1 to 10:
