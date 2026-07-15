@@ -145,7 +145,7 @@ The OR operator `||` combines tests, with the result being True if
 either of the tests are true:
 
 ~~~bash
-[[ $A -lt 0 ]]  # True if either: A is greater than B, or if A is less than 0.
+[[ $A -gt $B || $A -lt 0 ]]  # True if either: A is greater than B, or if A is less than 0.
 ~~~
 
 You can use multiple `!`, `&&`, and `||` operators toegether:
